@@ -1,0 +1,30 @@
+section.platform
+  .container
+    h2.platform__title Unified automation infrastructure
+      br
+      | with a versatile suite of tools
+    p.platform__text Ditto is a no-code platform for Web3 users with a flexible automation infrastructure for Web3 builders and a seamless integration tools for existing dApps.
+    .platform-list__wrapper
+      ul.platform-list.keen-slider
+        li.platform-list__item.keen-slider__slide
+          img(src="./img/platform/platform-mobile-1.jpg", alt="").platform-list__img
+          span.platform-list__title No-code automation builder
+          p.platform-list__text Users can simply fill in the required data and select the appropriate account, and the platform will take care of the rest. This provides a seamless experience for users, enabling them to carry out complex DeFi activities without any technical difficulties. The platform also ensures reliable and predictable results for all transactions, so users can trust that their funds are safe and secure.
+          button.btn.btn_secondary Learn more
+        li.platform-list__item.keen-slider__slide
+          img(src="./img/platform/platform-mobile-2.jpg", alt="").platform-list__img
+          span.platform-list__title Keeper service
+          span.platform-list__subtitle Transaction execution engine
+          p.platform-list__text The next generation of Web 3 transactions automation helping users to create conditional execution of their smart contract functions through a hyper-reliable and decentralized automation platform. It uses a sophisticated system of conditional execution to ensure that users can accurately and securely execute their transactions with a maximum reliability.
+          button.btn.btn_secondary Learn more
+        li.platform-list__item.keen-slider__slide
+          img(src="./img/platform/platform-mobile-3.jpg", alt="").platform-list__img
+          span.platform-list__title Unified interface for DeFi
+          p.platform-list__text A new solution for users looking to build, edit and track automation workflows in Web3 & Web2 applications. Our product is the perfect choice for users looking for an efficient, reliable, and secure way to automate their processes.
+          button.btn.btn_secondary Learn more
+      .platform-list__btns
+        button.platform-list__btn.platform-list__btn_left.disabled
+          +icon('arrow-left')
+        button.platform-list__btn.platform-list__btn_right
+          +icon('arrow-right')
+// добавить изображения 2х srcset, адаптив. Сделать анимацию при на десктопе. Чтобы при клике на learn more карточка раскрывалась на всю ширину блока, и открывался контент .platform-list__text. На мобилке это слайдер

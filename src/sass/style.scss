@@ -1,0 +1,17 @@
+@import "global/helpers/helpers";
+@import "global/libs/libs";
+@import "global/components/components";
+@import "../pug/pages/ui/_ui"; //remove before prod
+
+//index
+@import "../pug/pages/index/_1-screen";
+@import "../pug/pages/index/_services";
+@import "../pug/pages/index/_partners";
+@import "../pug/pages/index/_platform";
+@import "../pug/pages/index/_opportunities";
+@import "../pug/pages/index/_proposal";
+@import "../pug/pages/index/_advantages";
+@import "../pug/pages/index/_tools";
+@import "../pug/pages/index/_templates";
+@import "../pug/pages/index/_points";
+

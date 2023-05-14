@@ -1,0 +1,56 @@
+$font-family-main: 'Inter', sans-serif;
+//SIZE
+$font-size-main: 16px;
+$font-family-title: "Gilroy", sans-serif;
+$font-size-h1: 34px;
+$font-size-h2: 34px;
+
+//COLORS
+
+:root {
+  --black: #000;
+  --white: #ffffff;
+  --green: #00C471;
+  --green-dark: #009154;
+  --beige-1: #FAFAFA;
+  --beige-2: #F7F2EC;
+  --beige-3: #DED5CB;
+  --beige-4: #EAE5DF;
+  --beige-5: #FBF5EE;
+  --beige-6: #e8d9c8;
+  --gray-dark: #202020;
+  --gray: #686868;
+}
+
+$black: var(--black);
+$white: var(--white);
+$main: var(--green);
+$bg: var(--beige-1);
+$bg-dark: var(--gray-dark);
+$bg-beige: var(--beige-5);
+$text: var(--gray-dark);
+$white-text: var(--white);
+$gray-text: var(--gray);
+$btn-1-bg: $main;
+$btn-1-cl: var(--white);
+$btn-1-bg-hover: var(--green-dark);
+$btn-2-bg: var(--beige-2);
+$btn-2-br: var(--beige-4);
+$btn-2-cl: var(--gray-dark);
+$btn-2-bg-hover: var(--beige-6);
+$btn-3-bg: transparent;
+$btn-3-br: $main;
+$btn-3-cl: $text;
+$border-color: var(--beige-2);
+$icon-bg: var(--beige-2);
+$icon-br: var(--beige-4);
+$link: $main;
+$link-hover: var(--green-dark);
+$footer-title: var(--gray);
+$footer-soc: var(--gray);
+
+
+
+$breakpoints: ("320": 320px, "375": 375px, "768": 768px, "1024": 1024px, "1280": 1280px, "1440": 1440px, "1600": 1600px);
+//width container
+$max-width: 1150px;

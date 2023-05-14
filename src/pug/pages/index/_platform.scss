@@ -1,0 +1,114 @@
+.platform {
+  background: $bg-dark;
+  padding: 64px 0;
+  color: $white-text;
+  margin-top: -1px;
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__text {
+    margin: 24px 0 0;
+    text-align: center;
+  }
+}
+
+.platform-list {
+  margin: 0 auto;
+  max-width: 350px;
+  border-radius: 32px;
+  overflow: visible!important;
+  @include mq('768') {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+  }
+  &__item {
+    box-shadow: 10px 0px 24px -4px rgba(16, 24, 40, 0.08), 7px 0px 8px -4px rgba(16, 24, 40, 0.03);
+    border-radius: 32px;
+    background: $bg;
+    color: $text;
+    overflow: hidden;
+    margin-bottom: 20px;
+    @include mq('768') {
+      width: 32%;
+      text-align: center;
+      height: 373px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+  &__title {
+    display: block;
+    margin: 24px;
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  &__subtitle {
+    display: block;
+    margin: 8px 24px;
+    line-height: 1.3;
+  }
+
+  &__text {
+    margin: 40px 24px 104px;
+    @include mq('768') {
+      display: none;
+    }
+  }
+
+  &__btns {
+    position: absolute;
+    width: 100%;
+    max-width: 350px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    @include mq('768') {
+      display: none;
+    }
+  }
+  &__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: $main;
+    transition: background 0.2s ease-in-out;
+    box-shadow: none;
+    &:focus {
+      box-shadow: none;
+    }
+    &:hover {
+      background: $btn-1-bg-hover;
+    }
+    &.disabled {
+      opacity: 0.2;
+    }
+  }
+
+  .btn {
+    display: none;
+    @include mq('768') {
+      display: block;
+      margin-top: auto;
+    }
+  }
+
+}

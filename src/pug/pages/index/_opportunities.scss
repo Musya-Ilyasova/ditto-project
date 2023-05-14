@@ -1,0 +1,92 @@
+.opportunities {
+  padding: 64px 0;
+  position: relative;
+  background: $bg-beige;
+  margin-top: -4px;
+  @include mq('768') {
+    padding: 80px 0;
+  }
+  &:before {
+    content: "";
+    background: $bg-dark;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 535px;
+    z-index: 0;
+    clip-path: ellipse(100% 100% at 50% -34%);
+    @include mq('768') {
+      clip-path:  ellipse(100% 100% at 50% -22%);
+      height: 366px;
+    }
+  }
+  @include mq('768') {
+    padding: 80px 0;
+  }
+  &__title {
+    color: $white-text;
+    position: relative;
+    z-index: 1;
+
+  }
+  &__text {
+    color: $white-text;
+    text-align: center;
+    margin: 24px 0;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.opportunities-tabs {
+  display: block;
+  &__btns {
+    box-shadow: 0px 20px 24px -4px rgba(43, 39, 35, 0.08), 0px 8px 8px -4px rgba(43, 39, 35, 0.03);
+    background: $bg;
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 787px;
+    margin: 0 auto;
+  }
+  &__btn {
+    font-family: 'Gilroy';
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1.3;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 49px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: 0.2s ease-in-out;
+    &.active, &:hover {
+      background: $main;
+      color: $white-text;
+      border: 1px solid $main;
+    }
+    @include mq('375') {
+      padding: 0 43px;
+    }
+    @include mq('768') {
+      padding: 0 24px;
+    }
+  }
+  &__contents {
+    box-shadow: 0px 20px 24px -4px rgba(43, 39, 35, 0.08), 0px 8px 8px -4px rgba(43, 39, 35, 0.03);
+    border-radius: 20px;
+    background: $bg;
+    margin-top: 24px;
+  }
+  &__content {
+    display: none;
+    width: 100%;
+    height: 568px;
+    &.active {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+//Inter
+@include font-face(
+  "Inter",
+  "../fonts/inter/inter-regular",
+  400,
+  normal,
+  woff woff2
+);
+
+@include font-face(
+  "Inter",
+  "../fonts/inter/inter-medium",
+  500,
+  normal,
+  woff woff2
+);
+
+@include font-face(
+  "Inter",
+  "../fonts/inter/inter-semibold",
+  600,
+  normal,
+  woff woff2
+);
+
+//Gilroy
+
+@include font-face(
+  "Gilroy",
+  "../fonts/gilroy/gilroy-semibold",
+  600,
+  normal,
+  woff woff2
+);
+
+@include font-face(
+  "Gilroy",
+  "../fonts/gilroy/gilroy-bold",
+  700,
+  normal,
+  woff woff2
+);
+
+/* weights
+thin-100
+light/extralight 200
+book/light 300
+regular 400
+medium 500
+demibold/semibold 600
+bold 700
+extrabold 800
+heavy/black 900
+*/

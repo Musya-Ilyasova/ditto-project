@@ -1,0 +1,17 @@
+//header
+header.header
+  .container.header__container
+    a.logo(href="./")
+      +icon("logo")
+    .header-menu__wrapper
+      nav
+        ul.header-menu
+          li.header-menu__item
+            a.header-menu__link(href="") Docs
+          li.header-menu__item
+            a.header-menu__link(href="") Cases
+          li.header-menu__item
+            a.header-menu__link(href="") Roadmap
+      button.btn.btn_third.header__btn Enter App
+    button.header__burger menu button
+      +icon('burger')

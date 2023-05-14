@@ -1,0 +1,56 @@
+//first-screen
+.first-sc {
+  padding-top: 112px;
+  padding-bottom: 42px;
+  @include mq('768') {
+    padding-top: 124px;
+    padding-bottom: 55px;
+  }
+  @include mq('1024') {
+    padding-top: 164px;
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__slider {
+    display: inline-block;
+    background: $main;
+    border-radius: 16px;
+    padding: 0 16px;
+    line-height: 45px;
+    color: $white-text;
+  }
+  &__text {
+    margin-bottom: 40px;
+  }
+  &__container {
+    @include mq('768') {
+      display: flex;
+    }
+  }
+  &__right {
+    margin-top: 44px;
+    max-width: 582px;
+    margin: 44px auto 0;
+    @include mq('768') {
+      margin-left: auto;
+      width: 45%;
+      max-width: 501px;
+    }
+    @include mq('1024') {
+      width: 501px;
+    }
+  }
+  &__left {
+    @include mq('768') {
+      width: 50%;
+      padding-top: 39px;
+    }
+    @include mq('1024') {
+      padding-top: 69px;
+      width: calc(100% - 501px);
+      padding-right: 37px;
+    }
+
+  }
+}

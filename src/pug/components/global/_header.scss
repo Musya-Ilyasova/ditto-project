@@ -1,0 +1,66 @@
+.header {
+  padding: 40px 0 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  // не работает фон почему-то
+  background: $bg;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mq('768') {
+      justify-content: flex-start;
+    }
+  }
+  &__btn {
+    @include mq('768') {
+      width: 151px;
+      margin-left: auto;
+    }
+  }
+  &__burger {
+    font-size: 0;
+    width: 24px;
+    height: 14px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    @include mq('768') {
+      display: none;
+    }
+  }
+}
+.logo {
+  width: 117px;
+  height: 40px;
+  display: block;
+  font-size: 0;
+  @include mq('768') {
+    width: 132px;
+    height: 46px;
+  }
+}
+
+.header-menu {
+  @include mq('768') {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  &__wrapper {
+    display: none;
+    @include mq('768') {
+      display: flex;
+      flex-grow: 2;
+      margin-left: 64px;
+    }
+  }
+  &__item {
+    margin-right: 32px;
+  }
+}
+
+
