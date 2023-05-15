@@ -52,6 +52,13 @@ const toolsSlider = () => {
       slides: {
         perView: "auto"
       },
+      breakpoints: {
+        '(min-width: 768px)': {
+          slides: {
+            perView: 4
+          }
+        },
+      },
     },
     [ThumbnailPlugin(slider)]
   )
