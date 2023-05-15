@@ -15,6 +15,9 @@
     left: 0;
     clip-path: ellipse(247% 100% at 50% 120%);
     z-index: 0;
+    @include mq('768') {
+      clip-path: ellipse(114% 100% at 50% 120%);
+    }
   }
   &__title {
     margin-bottom: 24px;

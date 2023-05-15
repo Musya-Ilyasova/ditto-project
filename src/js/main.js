@@ -1,11 +1,13 @@
 import partnersSlider from "./modules/partners-slider";
 import platformSlider from "./modules/platform-slider";
 import toolsSlider from "./modules/tools-slider";
-// import headerSticky from "./modules/header";
+import addMenu from "./modules/menu";
+import headerScroll from "./modules/headerScroll";
 
-document.addEventListener("DOMContentLoaded", function () {
-	svg4everybody({});
+document.addEventListener("DOMContentLoaded",  () => {
   partnersSlider();
   platformSlider();
   toolsSlider();
+  addMenu();
+  headerScroll();
 })

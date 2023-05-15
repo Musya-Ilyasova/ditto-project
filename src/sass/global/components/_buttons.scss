@@ -26,8 +26,9 @@
     padding: 0 28px;
     width: auto;
   }
-  &:hover {
+  &:hover, &:focus {
     background: $btn-1-bg-hover;
+    color: $btn-1-cl;
   }
 }
 
@@ -35,8 +36,9 @@
   background: $btn-2-bg;
   color: $btn-2-cl;
   border: 1px solid $btn-2-br;
-  &:hover {
+  &:hover, &:focus {
     background: $btn-2-bg-hover;
+    color: $btn-2-cl;
   }
 }
 
@@ -44,7 +46,7 @@
   background: $btn-3-bg;
   color: $btn-3-cl;
   border: 2px solid $btn-3-br;
-  &:hover {
+  &:hover, &:focus {
     background: $btn-1-bg;
     color: $btn-1-cl;
   }
