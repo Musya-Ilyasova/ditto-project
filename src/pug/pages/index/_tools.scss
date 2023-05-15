@@ -41,7 +41,7 @@
       left: 0;
       height: 100%;
       width: 4px;
-      background:$border-color;
+      background: $border-color;
       top: 0;
       position: absolute;
     }
@@ -49,8 +49,22 @@
       background: transparent;
       padding: 20px;
       transition: background 0.2s ease-in-out;
+      overflow: visible!important;
       &.active {
         background: linear-gradient(90deg, rgba(244, 240, 235, 0.6) 0%, rgba(244, 240, 235, 0) 100%);
+        &:before {
+          background: $main;
+        }
+      }
+      &:before {
+        content: "";
+        height: 100%;
+        width: 4px;
+        position: absolute;
+        left: -4px;
+        top: 0;
+        background: transparent;
+        transition: 0.2s ease-in-out;
       }
     }
     &__title {
@@ -63,18 +77,24 @@
   }
 
   &-gallary {
+    overflow: visible!important;
     &__item {
       display: flex;
       justify-content: center;
     }
+    &__wrapper {
+      margin-left: -16px;
+      margin-right: -16px;
+      overflow: hidden;
+      width: calc(100% + 32px);
+      padding: 0 16px;
+    }
     img {
       max-width: 538px;
-      @include mq('768') {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-        object-position: center;
-      }
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
     }
   }
 }

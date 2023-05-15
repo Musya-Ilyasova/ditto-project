@@ -52,6 +52,7 @@
     "imagemin-mozjpeg": ">9.0.0",
     "imagemin-pngquant": ">9.0.0",
     "node-sass": "^8.0.0",
+    "svgo": "^3.0.2",
     "webpack": "^5.65.0",
     "webpack-stream": "^7.0.0"
   },

@@ -31,15 +31,26 @@ const toolsSlider = () => {
         })
       })
     }
-  }
-  var slider = new KeenSlider(".tools-slider-gallary")
+  };
+
+  var slider = new KeenSlider(
+    ".tools-slider-gallary",
+    {
+      slides: {
+        spacing: 16
+      }
+    }
+  );
+
   var thumbnails = new KeenSlider(
     ".tools-slider-thumbnail",
     {
       initial: 0,
+      rtl: false,
       vertical: true,
+      mode: "snap",
       slides: {
-        perView: 4
+        perView: "auto"
       },
     },
     [ThumbnailPlugin(slider)]
