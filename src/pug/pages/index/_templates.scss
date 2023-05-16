@@ -1,5 +1,6 @@
 .templates {
   padding: 64px 0;
+  text-align: center;
   @include mq('768') {
     padding: 80px 0;
   }
@@ -12,12 +13,6 @@
     max-width: 659px;
     @include mq('768') {
       font-weight: 500;
-    }
-  }
-  .btn {
-    @include mq('768') {
-      margin: 0 auto;
-      display: block;
     }
   }
 }

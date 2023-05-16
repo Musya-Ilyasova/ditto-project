@@ -30,6 +30,9 @@ body {
   overflow-anchor: auto;
   scroll-behavior: smooth;
   text-rendering: auto;
+  @include mq('768') {
+    font-size: 18px;
+  }
 
   /*&::-webkit-scrollbar {
     background-color: $gray-dark;
