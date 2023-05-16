@@ -1,4 +1,4 @@
-.services {
+.features {
   padding: 40px 0 64px;
   position: relative;
   @include mq('768') {
@@ -20,13 +20,13 @@
   }
   /// не хватает background: linear-gradient(180deg, #202020 0%, rgba(32, 32, 32, 0) 50%, #202020 100%);
   &:after {
-    background: url(../img/services-bg.svg) no-repeat;
+    background: url(../img/features-bg.svg) no-repeat;
     background-size: cover;
     background-position: center;
   }
 }
 
-.services-list {
+.features-list {
   margin-top: 48px;
   position: relative;
   z-index: 2;

@@ -1,6 +1,6 @@
 import KeenSlider from 'keen-slider'
 
-const partnersSlider = () => {
+const integrationsSlider = () => {
   const animation = { duration: 10000, easing: (t) => t }
   let perViewAdaptive = 2.5;
   if(window.innerWidth > "979")  {
@@ -9,7 +9,7 @@ const partnersSlider = () => {
   new KeenSlider(
     '#my-keen-slider',
     {
-      selector: '.partners-slider__item',
+      selector: '.integrations-slider__item',
       mode: "free",
       loop: true,
       slides: {
@@ -29,4 +29,4 @@ const partnersSlider = () => {
   )
 }
 
-export default partnersSlider;
+export default integrationsSlider;
