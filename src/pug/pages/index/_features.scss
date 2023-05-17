@@ -130,7 +130,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(var(--beige-3-rgb), 0.11);
+      background: $cicle;
       border-radius: 50%;
       @include mq('1024') {
         width: 524px;

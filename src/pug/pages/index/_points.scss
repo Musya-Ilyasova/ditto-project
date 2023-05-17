@@ -1,6 +1,6 @@
 .points {
   background: $bg-dark;
-  color: $white-text;
+  color: $text-white;
   padding: 64px 0;
   @include mq('768') {
     padding: 80px 0;
@@ -9,7 +9,7 @@
   &__text {
     text-align: center;
     &_gray {
-      color: $gray-text;
+      color: $text-gray;
     }
   }
   &__btn {
@@ -20,7 +20,7 @@
       display: inline-block;
     }
     &:hover {
-      color: $white-text;
+      color: $text-white;
     }
   }
 }

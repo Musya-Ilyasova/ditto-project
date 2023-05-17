@@ -1,12 +1,12 @@
 .footer {
   padding: 48px 0 24px;
   background: $bg-dark;
-  color: $white-text;
+  color: $text-white;
   @include mq('768') {
     padding: 48px 0;
   }
   &__btn.btn {
-    color: $white-text;
+    color: $text-white;
     margin-top: 32px;
     @include mq('768') {
       width: auto;

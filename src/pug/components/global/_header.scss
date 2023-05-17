@@ -31,7 +31,7 @@
     }
   }
   &__btn.btn {
-    color: $white-text;
+    color: $text-white;
     margin-top: auto;
     @include mq('768') {
       width: 151px;
@@ -110,7 +110,7 @@
     }
   }
   &__link {
-    color: $white-text;
+    color: $text-white;
     font-size: 34px;
     display: block;
     border-bottom: 1px solid transparent;
