@@ -21,8 +21,10 @@ $font-size-h2: 34px;
   --beige-4: #EAE5DF;
   --beige-5: #FBF5EE;
   --beige-6: #e8d9c8;
+  --beige-green: #C6D1C2;
   --gray-dark: #202020;
   --gray: #686868;
+  --gray-light: #D9D8DB;
 }
 
 $black: var(--black);
@@ -54,6 +56,9 @@ $footer-title: var(--gray);
 $footer-soc: var(--gray);
 $header-bg: rgba(var(--beige-1-rgb), 0.7);
 $cicle: rgba(var(--beige-3-rgb), 0.11);
+$platform-sl-bg-1: var(--beige-3);
+$platform-sl-bg-2: var(--beige-green);
+$platform-sl-bg-3: var(--gray-light);
 
 
 $breakpoints: ("320": 320px, "375": 375px, "768": 768px, "1024": 1024px, "1280": 1280px, "1440": 1440px, "1600": 1600px);
