@@ -13,12 +13,23 @@
     margin-bottom: 24px;
   }
   &__slider {
-    display: inline-block;
     background: $main;
     border-radius: 16px;
     padding: 0 16px;
     line-height: 45px;
     color: $text-white;
+    height: 45px;
+    &[data-keen-slider-v] {
+      display: inline-flex!important;
+      flex-direction: column!important;
+      flex-wrap: nowrap!important;
+      width: fit-content!important;
+    }
+    span {
+      display: inline-block;
+      width: auto;
+      text-align: center;
+    }
   }
   &__text {
     margin-bottom: 40px;
@@ -31,6 +42,7 @@
   &__right {
     margin-top: 44px;
     max-width: 582px;
+    min-height: 275px;
     margin: 44px auto 0;
     @include mq('768') {
       margin-left: auto;
@@ -38,7 +50,8 @@
       max-width: 501px;
     }
     @include mq('1024') {
-      width: 501px;
+      width: 486px;
+      height: 486px;
     }
   }
   &__left {
@@ -48,8 +61,78 @@
     }
     @include mq('1024') {
       padding-top: 69px;
-      width: calc(100% - 501px);
+      width: calc(100% - 486px);
       padding-right: 37px;
+    }
+  }
+  &__img {
+    &_mobile {
+      @include mq('1024') {
+        display: none;
+      }
+    }
+    &_desktop {
+      display: none;
+      position: relative;
+      @include mq('1024') {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      &:before, &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        background: $cicle;
+        border-radius: 50%;
+      }
+      &:after {
+        transform: translate(-50%, -50%) scale(0.7);
+      }
+      img {
+        position: absolute;
+        width: 95px;
+        height: 121px;
+        object-fit: contain;
+        z-index: 2;
+        border-radius: 11.5px;
+        box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+        &:first-child {
+          bottom: 10px;
+          right: 36px;
+          z-index: 4;
+        }
+        &:nth-child(2) {
+          left: -25px;
+          bottom: 53px;
+        }
+        &:nth-child(3) {
+          right: -55px;
+          bottom: 70px;
+          width: 458px;
+          height: 165px;
+          z-index: 3;
+        }
+        &:nth-child(4) {
+          left: -48px;
+          top: 123px;
+          width: 456px;
+          height: 177px;
+        }
+        &:nth-child(5) {
+          right: 182px;
+          top: 63px;
+        }
+        &:nth-child(6) {
+          left: 52px;
+          top: 12px;
+        }
+      }
     }
 
   }
