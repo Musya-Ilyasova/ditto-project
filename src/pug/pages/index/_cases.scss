@@ -1,5 +1,5 @@
 .cases {
-  padding: 64px 0;
+  padding: 47px 0 64px;
   position: relative;
   background: $bg-beige;
   @include mq('768') {
@@ -14,7 +14,7 @@
     width: 100%;
     height: 535px;
     z-index: 0;
-    clip-path: ellipse(100% 100% at 50% -34%);
+    clip-path: ellipse(160% 100% at 50% -34%);
     @include mq('768') {
       clip-path:  ellipse(114% 100% at 50% -22%);
       height: 430px;
@@ -29,14 +29,18 @@
   &__text {
     color: $text-white;
     text-align: center;
-    margin: 24px 0;
+    margin: 25px 0;
     position: relative;
     z-index: 1;
+    @include mq('768') {
+      margin: 25px 0;
+    }
   }
 }
 
 .cases-tabs {
   display: block;
+  margin-top: 40px;
   @include mq('768') {
     margin-top: 65px;
   }
@@ -44,10 +48,10 @@
     box-shadow: 0px 20px 24px -4px rgba(43, 39, 35, 0.08), 0px 8px 8px -4px rgba(43, 39, 35, 0.03);
     background: $bg;
     border-radius: 20px;
-    padding: 16px;
+    padding: 16px 16px 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     max-width: 300px;
     margin: 0 auto;
     @include mq('375') {
@@ -70,6 +74,10 @@
     border-radius: 12px;
     border: 1px solid transparent;
     transition: 0.2s ease-in-out;
+    @include mq('375') {
+      padding: 0 38px;
+      margin-bottom: 5px;
+    }
     &.active, &:hover {
       background: $main;
       color: $text-white;
@@ -119,7 +127,7 @@
     }
     &__bottom {
       text-align: center;
-      padding: 16px;
+      padding: 16px 16px 12px;
       border-top: 1px solid $bg-dark;
       margin-top: auto;
       @include mq('768') {
@@ -128,9 +136,11 @@
       p {
         max-width: 640px;
         margin: 0 auto;
-        font-family: $font-family-title;
+        font-size: 14px;
         @include mq('768') {
+          font-size: 18px;
           font-weight: 600;
+          font-family: $font-family-title;
         }
         @include mq('1280') {
           font-size: 22px;

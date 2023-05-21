@@ -21,6 +21,10 @@
   }
   &__title {
     margin-bottom: 24px;
+    @include mq('1280') {
+      white-space: wrap;
+    }
+
   }
   &__text {
     text-align: center;
@@ -46,7 +50,7 @@
   }
   &__item {
     border: 0.5px solid $black;
-    padding: 27px;
+    padding: 22px 24px;
     background: $bg;
     border-radius: 32px;
     margin-bottom: 16px;
@@ -68,7 +72,7 @@
     font-family: $font-family-title;
     font-size: 24px;
     line-height: 1.3;
-    margin-top: 35px;
+    margin-top: 26px;
     @include mq('768') {
       margin-top: 22px;
     }

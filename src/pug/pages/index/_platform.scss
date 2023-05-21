@@ -1,11 +1,9 @@
 .platform {
   background: $bg-dark;
-  padding: 64px 0;
+  padding: 80px 0 30px;
   color: $text-white;
-  margin-top: -1px;
   @include mq('768') {
     padding: 97px 0 80px;
-
   }
   &__title {
     margin-bottom: 26px;
@@ -94,7 +92,7 @@
     }
     &_first {
       background: $platform-sl-bg-1;
-      padding: 20px 0;
+      padding: 26px 0;
     }
     &_second {
       background: $platform-sl-bg-2;
@@ -132,7 +130,7 @@
   }
 
   &__text {
-    margin: 40px 0 104px;
+    margin: 40px 0 66px;
     @media screen and (max-height: 750px) {
       margin: 20px 24px 60px;
     }

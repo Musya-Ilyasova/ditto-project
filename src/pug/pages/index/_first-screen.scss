@@ -24,12 +24,16 @@
     color: $text-white;
     height: 45px;
     position: relative;
-
+    margin-top: 8px;
+    font-size: 32px;
+    margin-left: 4px;
+    @include mq('768') {
+      margin-top: 0px;
+    }
     @include mq('1280') {
       height: 56px;
       font-size: 40px;
       transform: translateY(-6px);
-      margin-left: 4px;
       padding: 0 22px;
     }
     &[data-keen-slider-v] {
@@ -40,11 +44,13 @@
 
     }
     span {
-      padding-top: 3px;
       display: inline-block;
       width: auto;
       text-align: center;
       height: 100%;
+      @include mq('768') {
+        padding-top: 3px;
+      }
     }
   }
   &__text {

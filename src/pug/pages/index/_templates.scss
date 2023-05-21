@@ -1,5 +1,5 @@
 .templates {
-  padding: 64px 0;
+  padding: 64px 0 38px;
   text-align: center;
   @include mq('768') {
     padding: 80px 0;
@@ -16,6 +16,14 @@
     max-width: 729px;
     @include mq('768') {
       font-weight: 500;
+    }
+  }
+  &__btn {
+    display: none;
+    @include mq('768') {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
     }
   }
 }
@@ -39,7 +47,7 @@
 
   }
   &__item {
-    padding: 31px;
+    padding: 28px 31px 29px;
     border: 0.5px solid $bg-dark;
     border-radius: 24px;
     text-align: center;
@@ -75,29 +83,28 @@
     font-family: $font-family-title;
     line-height: 1.3;
     font-size: 18px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     display: block;
+    @include mq('768') {
+      margin-bottom: 16px;
+    }
   }
   &__text {
-    @include mq('375') {
-      margin-top: 16px;
-    }
+    margin-top: 16px;
     @include mq('768') {
       font-size: 16px;
+      margin-top: 16px;
     }
   }
   &-icons {
     display: inline-flex;
     justify-content: center;
-    margin: 0 auto 16px;
+    margin: 19px auto 16px;
     width: auto;
     position: relative;
-    @include mq('375') {
-      margin-top: 16px;
-    }
+    margin-top: 19px;
     @include mq('1280') {
       margin-top: 12px;
-
     }
     &:before {
       content: "";

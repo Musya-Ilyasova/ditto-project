@@ -12,7 +12,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    clip-path: ellipse(247% 100% at 50% 120%);
+    clip-path: ellipse(235% 100% at 50% 120%);
     z-index: 1;
     @include mq('768') {
       clip-path: ellipse(214% 100% at 50% 133%);
@@ -29,7 +29,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    clip-path: ellipse(247% 100% at 50% 120%);
+    clip-path: ellipse(235% 100% at 50% 120%);
     z-index: 2;
     background: linear-gradient(180deg, #202020 0%, rgba(32, 32, 32, 0) 70%, #202020 100%);;
     @include mq('768') {
@@ -108,17 +108,18 @@
     position: relative;
     width: 280px;
     height: 280px;
-    margin: 0 auto;
-    padding: 16px;
+    margin: 3px auto 0;
+    padding: 16px 10px 10px;
     display: flex;
     @include mq('375') {
       width: 344px;
-      height: 344px;
+      height: 340px;
     }
     @include mq('768') {
       width: 300px;
       height: 300px;
       padding: 24px;
+      margin-top: 0;
     }
     @include mq('1024') {
       width: 524px;
