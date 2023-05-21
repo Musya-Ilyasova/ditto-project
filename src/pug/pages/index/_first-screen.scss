@@ -33,6 +33,9 @@
   }
   &__text {
     margin-bottom: 40px;
+    @include mq('768') {
+      font-weight: 500;
+    }
   }
   &__container {
     @include mq('768') {

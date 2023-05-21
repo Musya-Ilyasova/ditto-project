@@ -5,6 +5,7 @@ import addMenu from "./modules/menu";
 import headerScroll from "./modules/headerScroll";
 import firstScreenParralaxImg from "./modules/firstScreenParralax";
 import titleSlider from "./modules/firstScreenSlider";
+import casesTabs from "./modules/casesTabs";
 
 document.addEventListener("DOMContentLoaded",  () => {
   firstScreenParralaxImg();
@@ -14,4 +15,5 @@ document.addEventListener("DOMContentLoaded",  () => {
   toolsSlider();
   addMenu();
   headerScroll();
+  casesTabs();
 })

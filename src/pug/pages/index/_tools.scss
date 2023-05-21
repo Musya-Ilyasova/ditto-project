@@ -9,6 +9,9 @@
   }
   &__text {
     margin: 24px 0;
+    @include mq('768') {
+      font-weight: 500;
+    }
   }
   &__btn {
     margin: 0 auto;

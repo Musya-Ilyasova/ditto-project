@@ -6,6 +6,9 @@
   }
   &__title {
     margin-bottom: 24px;
+    @include mq('768') {
+      font-weight: 500;
+    }
   }
   &__text {
     margin: 24px auto;
