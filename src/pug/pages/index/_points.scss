@@ -62,6 +62,9 @@
     margin-bottom: 16px;
     &:first-child {
       padding-bottom: 24px;
+      .points-list-links__item {
+        font-size: 0;
+      }
     }
     @include mq('768') {
       width: 32.5%;

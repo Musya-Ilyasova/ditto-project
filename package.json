@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": ">=11.11.0"
+    "node": ">=16.x"
   },
   "browserslist": [
     "last 4 version",
@@ -23,6 +23,7 @@
     "@types/node": "^20.1.0",
     "babel-loader": "^9.1.2",
     "browser-sync": ">2.26.12",
+    "critical": "^5.1.1",
     "del": ">5.1.0",
     "esm": "^3.2.25",
     "gulp": "^4.0.2",

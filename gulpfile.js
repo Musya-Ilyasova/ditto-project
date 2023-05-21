@@ -1,6 +1,8 @@
 import pkg from 'gulp';
 import { pug, sass, scriptsLibs, scripts, img, imgUpload, svg, copy, clear, clearCache } from './gulp/config/allTasks.js'
 import browserSync from 'browser-sync';
+import { generate } from 'critical';
+
 
 const { src, dest, watch, series, parallel } = pkg;
 
@@ -11,6 +13,22 @@ global.app = {
   isDev: !process.argv.includes('--build'),
   src, dest, watch, series, parallel, reload,
 };
+
+
+/////////////////////////////////////////////////
+//-------------------CRITICAL------------------//
+/////////////////////////////////////////////////
+
+export const critical =  async () => {
+  generate({
+    inline: true,
+    base: 'dist/',
+    src: "index.html",
+    target: "css/style.min.css",
+    width: 1300,
+    height: 900,
+});
+}
 
 
 /////////////////////////////////////////////////
@@ -55,5 +73,5 @@ export default series(
 export const build = series(
   clear, clearCache,
   parallel(copy, img, imgUpload, svg),
-  parallel(pug, scriptsLibs, scripts, sass)
+  parallel(pug, scripts, sass)
 );

@@ -161,6 +161,7 @@
     background: $main;
     transition: background 0.2s ease-in-out;
     box-shadow: none;
+    font-size: 0;
     &:focus {
       box-shadow: none;
     }
