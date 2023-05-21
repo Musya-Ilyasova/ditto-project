@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <base href="">
+    <title>Ditto</title>
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="preconnect" href="">
+  </head>
+  <body>
+    <header class="header show">
+      <div class="container header__container"><a class="logo header__logo" href="./">
+          <svg class="icon icon-logo ">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg></a>
+        <div class="header-menu__wrapper">
+          <button class="header-menu__close">x</button>
+          <nav>
+            <ul class="header-menu">
+              <li class="header-menu__item"><a class="header-menu__link" href="#">Docs</a></li>
+              <li class="header-menu__item"><a class="header-menu__link" href="#">Cases</a></li>
+              <li class="header-menu__item"><a class="header-menu__link" href="#">Roadmap</a></li>
+            </ul>
+          </nav><a class="btn btn_third header__btn" href="#">Enter App</a>
+        </div>
+        <button class="header__burger">menu button
+          <svg class="icon icon-burger ">
+            <use xlink:href="img/sprite/sprite.svg#burger"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main class="ui">
+      <h1>This is UI page</h1>
+    </main>
+    <div class="pages" id="pages-22">
+      <div class="pages-header" id="toogle-23">
+        <p>Навигация страниц верстки</p><span>GP</span><i class="icon-pages" id="close-24"></i>
+      </div>
+    </div>
+    <script>
+      var pages = {
+        'ГЛАВНАЯ': './',
+        'UI': 'ui.html',
+      };
+      createList(pages);
+
+            var pagesHeader = document.querySelector('#toogle-23');
+      pagesHeader.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.querySelector('#pages-22').classList.toggle('open');
+      });
+
+            function createList(pages) {
+        var ulElement = document.createElement('UL');
+        for (var key in pages) {
+          var liElement = document.createElement('LI');
+          liElement.innerHTML = `<a href="${pages[key]}">${key}</a>`;
+          ulElement.appendChild(liElement);
+        }
+        document.querySelector('#pages-22').appendChild(ulElement);
+      }
+    </script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
