@@ -2,9 +2,10 @@ import KeenSlider from 'keen-slider'
 
 const integrationsSlider = () => {
   const animation = { duration: 10000, easing: (t) => t }
-  let perViewAdaptive = 2.5;
+  let perViewAdaptive = 2.5, spacing = 10;
   if(window.innerWidth > "979")  {
     perViewAdaptive = 5.7;
+    spacing = 56
   }
   new KeenSlider(
     '#my-keen-slider',
@@ -15,7 +16,7 @@ const integrationsSlider = () => {
       slides: {
         origin: "center",
         perView: perViewAdaptive,
-        spacing: 10
+        spacing: spacing
       },
       renderMode: "performance",
       drag: true,

@@ -11,6 +11,10 @@
   }
   &__title {
     margin-bottom: 24px;
+    @include mq('1280') {
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
   }
   &__slider {
     background: $main;
@@ -19,22 +23,37 @@
     line-height: 45px;
     color: $text-white;
     height: 45px;
+    position: relative;
+
+    @include mq('1280') {
+      height: 56px;
+      font-size: 40px;
+      transform: translateY(-6px);
+      margin-left: 4px;
+      padding: 0 22px;
+    }
     &[data-keen-slider-v] {
       display: inline-flex!important;
       flex-direction: column!important;
       flex-wrap: nowrap!important;
       width: fit-content!important;
+
     }
     span {
+      padding-top: 3px;
       display: inline-block;
       width: auto;
       text-align: center;
+      height: 100%;
     }
   }
   &__text {
     margin-bottom: 40px;
     @include mq('768') {
       font-weight: 500;
+    }
+    @include mq('1280') {
+      margin-bottom: 47px;
     }
   }
   &__container {
@@ -48,13 +67,14 @@
     min-height: 275px;
     margin: 44px auto 0;
     @include mq('768') {
-      margin-left: auto;
+      margin-right: 0;
       width: 45%;
       max-width: 501px;
     }
     @include mq('1024') {
       width: 486px;
       height: 486px;
+      margin-top: -13px;
     }
   }
   &__left {
@@ -63,7 +83,7 @@
       padding-top: 39px;
     }
     @include mq('1024') {
-      padding-top: 69px;
+      padding-top: 63px;
       width: calc(100% - 486px);
       padding-right: 37px;
     }
@@ -111,28 +131,28 @@
           z-index: 4;
         }
         &:nth-child(2) {
-          left: -25px;
+          left: 9px;
           bottom: 53px;
         }
         &:nth-child(3) {
-          right: -55px;
+          right: -91px;
           bottom: 70px;
           width: 458px;
           height: 165px;
           z-index: 3;
         }
         &:nth-child(4) {
-          left: -48px;
+          left: -16px;
           top: 123px;
           width: 456px;
           height: 177px;
         }
         &:nth-child(5) {
-          right: 182px;
+          right: 150px;
           top: 63px;
         }
         &:nth-child(6) {
-          left: 52px;
+          left: 84px;
           top: 12px;
         }
       }

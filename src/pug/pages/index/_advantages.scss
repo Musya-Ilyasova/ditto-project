@@ -16,7 +16,7 @@
     clip-path: ellipse(247% 100% at 50% 120%);
     z-index: 0;
     @include mq('768') {
-      clip-path: ellipse(114% 100% at 50% 120%);
+      clip-path: ellipse(76% 89% at 50% 120%);
     }
   }
   &__title {
@@ -24,7 +24,8 @@
   }
   &__text {
     text-align: center;
-    margin: 24px 0;
+    margin: 26px 0;
+    font-weight: 500;
   }
   .icon {
     width: 40px;
@@ -41,6 +42,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     grid-gap: 32px;
+    margin-top: 64px;
   }
   &__item {
     border: 0.5px solid $black;
@@ -56,7 +58,8 @@
     }
     @include mq('768') {
       height: 100%;
-      padding: 37px;
+      padding: 32px;
+      margin-bottom: 0;
     }
   }
   &__title {
@@ -66,9 +69,15 @@
     font-size: 24px;
     line-height: 1.3;
     margin-top: 35px;
+    @include mq('768') {
+      margin-top: 22px;
+    }
   }
   &__text {
     margin-top: 16px;
+    @include mq('768') {
+      font-size: 16px;
+    }
   }
 
 }

@@ -1,5 +1,5 @@
 .header {
-  padding: 40px 0 32px;
+  padding: 18px 0 32px;
   position: fixed;
   top: 0;
   left: 0;
@@ -121,6 +121,7 @@
       border: none;
       padding: 0;
       color: $text;
+      font-weight: 500;
       &:hover {
         border: none;
       }

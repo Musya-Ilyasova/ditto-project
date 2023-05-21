@@ -58,6 +58,11 @@ const toolsSlider = () => {
             perView: 4
           }
         },
+        '(min-width: 1280px)': {
+          slides: {
+            perView: "auto"
+          }
+        },
       },
     },
     [ThumbnailPlugin(slider)]

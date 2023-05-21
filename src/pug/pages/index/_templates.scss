@@ -13,7 +13,7 @@
   &__text {
     margin: 24px auto;
     text-align: center;
-    max-width: 659px;
+    max-width: 729px;
     @include mq('768') {
       font-weight: 500;
     }
@@ -43,6 +43,9 @@
     border: 0.5px solid $bg-dark;
     border-radius: 24px;
     text-align: center;
+    @include mq('768') {
+      padding: 26px 31px 29px;
+    }
     &_soon {
       position: relative;
       &:before {
@@ -59,6 +62,11 @@
         border: 0.5px solid $bg-dark;
         color: $text-white;
         font-weight: 700;
+        @include mq('768') {
+          line-height: 26px;
+          height: 26px;
+          padding: 0 13px;
+        }
       }
     }
   }
@@ -74,6 +82,9 @@
     @include mq('375') {
       margin-top: 16px;
     }
+    @include mq('768') {
+      font-size: 16px;
+    }
   }
   &-icons {
     display: inline-flex;
@@ -84,12 +95,16 @@
     @include mq('375') {
       margin-top: 16px;
     }
+    @include mq('1280') {
+      margin-top: 12px;
+
+    }
     &:before {
       content: "";
       width: 100%;
       height: 1px;
       position: absolute;
-      top: 50%;
+      top: 47%;
       left: 0;
       right: 0;
       background: $main;
@@ -110,6 +125,9 @@
       }
       &:not(:last-child) {
         margin-right: 43px;
+        @include mq('1280') {
+          margin-right: 46px;
+        }
       }
       img {
         width: 100%;

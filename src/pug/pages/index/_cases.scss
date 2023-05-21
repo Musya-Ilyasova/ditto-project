@@ -2,9 +2,8 @@
   padding: 64px 0;
   position: relative;
   background: $bg-beige;
-  margin-top: -4px;
   @include mq('768') {
-    padding: 80px 0;
+    padding: 28px 0 48px;
   }
   &:before {
     content: "";
@@ -17,12 +16,9 @@
     z-index: 0;
     clip-path: ellipse(100% 100% at 50% -34%);
     @include mq('768') {
-      clip-path:  ellipse(100% 100% at 50% -22%);
-      height: 366px;
+      clip-path:  ellipse(114% 100% at 50% -22%);
+      height: 430px;
     }
-  }
-  @include mq('768') {
-    padding: 80px 0;
   }
   &__title {
     color: $text-white;
@@ -41,6 +37,9 @@
 
 .cases-tabs {
   display: block;
+  @include mq('768') {
+    margin-top: 65px;
+  }
   &__btns {
     box-shadow: 0px 20px 24px -4px rgba(43, 39, 35, 0.08), 0px 8px 8px -4px rgba(43, 39, 35, 0.03);
     background: $bg;
@@ -57,6 +56,7 @@
     @include mq('768') {
       max-width: 787px;
       justify-content: space-between;
+      padding: 16px 22px;
     }
   }
   &__btn {
@@ -80,6 +80,11 @@
     }
   }
   &-content {
+    margin-top: 24px;
+    @include mq('1280') {
+      margin-top: 39px;
+
+    }
     &__item {
       display: none;
       width: 100%;
@@ -87,11 +92,10 @@
       box-shadow: 0px 20px 24px -4px rgba(43, 39, 35, 0.08), 0px 8px 8px -4px rgba(43, 39, 35, 0.03);
       border-radius: 20px;
       background: $bg;
-      margin-top: 24px;
       display: none;
       flex-direction: column;
       @include mq('1280') {
-        height: 568px;
+        height: 576px;
       }
       &.active {
         display: flex;
@@ -122,10 +126,15 @@
         padding: 13px 0;
       }
       p {
-        max-width: 616px;
+        max-width: 640px;
         margin: 0 auto;
+        font-family: $font-family-title;
         @include mq('768') {
           font-weight: 600;
+        }
+        @include mq('1280') {
+          font-size: 22px;
+          line-height: 1.4;
         }
       }
     }

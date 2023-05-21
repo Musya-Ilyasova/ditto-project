@@ -23,6 +23,7 @@ $font-size-h2: 34px;
   --beige-6: #e8d9c8;
   --beige-green: #C6D1C2;
   --gray-dark: #202020;
+  --gray-dark-2: #1D1D1D;
   --gray: #686868;
   --gray-light: #D9D8DB;
 }
@@ -52,6 +53,7 @@ $icon-br: var(--beige-4);
 $link: $main;
 $link-hover: var(--green-dark);
 $link-br-hover: rgba(var(--green-rgb), 0.4);
+$footer-bg: var(--gray-dark-2);
 $footer-title: var(--gray);
 $footer-soc: var(--gray);
 $header-bg: rgba(var(--beige-1-rgb), 0.7);
