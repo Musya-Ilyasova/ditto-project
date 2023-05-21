@@ -1,7 +1,6 @@
 import pkg from 'gulp';
 import { pug, sass, scriptsLibs, scripts, img, imgUpload, svg, copy, clear, clearCache } from './gulp/config/allTasks.js'
 import browserSync from 'browser-sync';
-import ghPages from 'gulp-gh-pages';
 
 const { src, dest, watch, series, parallel } = pkg;
 
@@ -40,15 +39,6 @@ export const serve = () => {
 }
 
 /////////////////////////////////////////////////
-//-------------------DEPLOY-------------------//
-/////////////////////////////////////////////////
-
-export const deploy = () => {
-  return app.src('./dist/**/*')
-    .pipe(ghPages());
-}
-
-/////////////////////////////////////////////////
 //-------------------DEFAULT-------------------//
 /////////////////////////////////////////////////
 
@@ -65,6 +55,5 @@ export default series(
 export const build = series(
   clear, clearCache,
   parallel(copy, img, imgUpload, svg),
-  parallel(pug, scriptsLibs, scripts, sass),
-  parallel(deploy)
+  parallel(pug, scriptsLibs, scripts, sass)
 );
