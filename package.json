@@ -5,8 +5,6 @@
   "main": "gulpfile.esm.js",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -m 'Automatically update gh-pages [skip ci]'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
