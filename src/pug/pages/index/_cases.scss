@@ -91,7 +91,6 @@
     margin-top: 24px;
     @include mq('1280') {
       margin-top: 39px;
-
     }
     &__item {
       display: none;
@@ -107,6 +106,11 @@
       }
       &.active {
         display: flex;
+      }
+      &:last-child {
+        p {
+          max-width: 100%;
+        }
       }
     }
     &__top {
@@ -131,7 +135,7 @@
       border-top: 1px solid $bg-dark;
       margin-top: auto;
       @include mq('768') {
-        padding: 13px 0;
+        padding: 13px 16px;
       }
       p {
         max-width: 640px;
