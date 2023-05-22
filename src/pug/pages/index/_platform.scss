@@ -132,7 +132,7 @@
   &__text {
     margin: 40px 0 66px;
     @media screen and (max-height: 750px) {
-      margin: 20px 24px 60px;
+      margin: 20px 0 60px;
     }
     @include mq('768') {
       display: none;

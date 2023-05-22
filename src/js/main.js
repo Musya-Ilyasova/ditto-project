@@ -7,10 +7,12 @@ import firstScreenParralaxImg from "./modules/firstScreenParralax";
 import titleSlider from "./modules/firstScreenSlider";
 import casesTabs from "./modules/casesTabs";
 import loadCss from "./modules/loadCss";
+import wow from "./modules/animated";
 
 loadCss('css/style.min.css');
 
 document.addEventListener("DOMContentLoaded",  () => {
+  wow.init();
   firstScreenParralaxImg();
   titleSlider();
   integrationsSlider();
