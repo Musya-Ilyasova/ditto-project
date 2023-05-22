@@ -162,6 +162,10 @@
     transition: background 0.2s ease-in-out;
     box-shadow: none;
     font-size: 0;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
     &:focus {
       box-shadow: none;
     }
@@ -171,6 +175,10 @@
     &.disabled {
       opacity: 0.2;
       pointer-events: none;
+    }
+    .icon {
+      width: 24px;
+      height: 24px;
     }
   }
 
@@ -297,6 +305,7 @@
     &__img {
       order: 2;
       width: 164px;
+      height: 100%;
       @include mq('1024') {
         width: 264px;
       }

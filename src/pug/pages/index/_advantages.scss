@@ -38,7 +38,8 @@
 }
 
 .advantages-list {
-  margin-top: 40px;
+  margin-top: 20px;
+  padding-top: 20px;
   position: relative;
   z-index: 1;
   @include mq('768') {
@@ -46,7 +47,8 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     grid-gap: 32px;
-    margin-top: 64px;
+    margin-top: 44px;
+    padding-top: 20px;
   }
   &__item {
     border: 0.5px solid $black;

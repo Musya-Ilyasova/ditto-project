@@ -33,15 +33,11 @@ body {
   @include mq('768') {
     font-size: 18px;
   }
-
-  /*&::-webkit-scrollbar {
-    background-color: $gray-dark;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: $red;
-  }*/
 }
 
+section {
+  overflow: hidden;
+}
 img,
 video {
   max-width: 100%;
