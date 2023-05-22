@@ -34,12 +34,12 @@
     grid-column-gap: 16px;
     margin-top: 20px;
     margin-bottom: 25px;
+    width: 100%;
   }
   @include mq('1024') {
     grid-template-columns: 1fr 523px;
     grid-template-rows: auto;
     grid-column-gap: 16px;
-
   }
   @include mq('1280') {
     grid-template-columns: 1fr 523px;
@@ -111,13 +111,22 @@
 
   &-gallary {
     overflow: visible!important;
-    @include mq('1024px') {
-      width: 100%;
+    @include mq('1024') {
       height: 100%;
     }
     &__item {
       display: flex;
       justify-content: center;
+      border-radius: 32px;
+      overflow: hidden;
+      background: $tools-bg;
+      border-radius: 32px;
+      border: 1px solid $tools-br;
+      &:first-child {
+        img {
+          object-position: right bottom;
+        }
+      }
     }
     &__wrapper {
       margin-left: -16px;
@@ -134,13 +143,11 @@
       }
     }
     img {
-      max-width: 538px;
       height: 100%;
       width: 100%;
+      max-width: 523px;
       object-fit: contain;
       object-position: center;
-      border-radius: 32px;
-
     }
   }
 }

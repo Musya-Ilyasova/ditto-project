@@ -7,7 +7,13 @@ const titleSlider = () => {
       loop: true,
       renderMode: "performance",
       drag: false,
-      vertical: true
+      vertical: true,
+      slides: {
+        spacing: 5,
+      },
+      defaultAnimation: {
+        duration: 1000,
+      }
     },
     [
       (slider) => {
@@ -21,7 +27,7 @@ const titleSlider = () => {
           if (mouseOver) return
           timeout = setTimeout(() => {
             slider.next()
-          }, 2000)
+          }, 1000)
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {
