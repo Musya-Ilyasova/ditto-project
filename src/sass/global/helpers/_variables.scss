@@ -7,27 +7,6 @@ $font-size-h2: 34px;
 
 //COLORS
 
-:root {
-  --black: #000;
-  --white: #ffffff;
-  --green: #00C471;
-  --green-rgb: 0, 196, 113;
-  --green-dark: #009154;
-  --beige-1: #FAFAFA;
-  --beige-1-rgb: 250, 250, 250;
-  --beige-2: #F7F2EC;
-  --beige-3: #DED5CB;
-  --beige-3-rgb: 222, 213, 203;
-  --beige-4: #EAE5DF;
-  --beige-5: #FBF5EE;
-  --beige-6: #e8d9c8;
-  --beige-green: #C6D1C2;
-  --gray-dark: #202020;
-  --gray-dark-2: #1D1D1D;
-  --gray: #686868;
-  --gray-light: #D9D8DB;
-}
-
 $black: var(--black);
 $white: var(--white);
 $main: var(--green);

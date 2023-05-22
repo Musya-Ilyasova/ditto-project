@@ -8,7 +8,7 @@ import titleSlider from "./modules/firstScreenSlider";
 import casesTabs from "./modules/casesTabs";
 import loadCss from "./modules/loadCss";
 
-// loadCss('css/style.min.css');
+loadCss('css/style.min.css');
 
 document.addEventListener("DOMContentLoaded",  () => {
   firstScreenParralaxImg();

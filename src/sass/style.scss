@@ -1,7 +1,4 @@
 @import "global/helpers/helpers";
-@import "global/libs/libs";
-@import "global/components/components";
-
 //index
 @import "../pug/pages/index/_first-screen";
 @import "../pug/pages/index/_features";
@@ -13,4 +10,5 @@
 @import "../pug/pages/index/_tools";
 @import "../pug/pages/index/_templates";
 @import "../pug/pages/index/_points";
+@import "../pug/components/global/_footer";
 

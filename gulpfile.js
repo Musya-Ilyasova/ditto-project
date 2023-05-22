@@ -1,7 +1,6 @@
 import pkg from 'gulp';
 import { pug, sass, scriptsLibs, scripts, img, imgUpload, svg, copy, clear, clearCache } from './gulp/config/allTasks.js'
 import browserSync from 'browser-sync';
-import extractCriticalCss from 'gulp-extract-critical-css';
 
 
 const { src, dest, watch, series, parallel } = pkg;
@@ -38,17 +37,6 @@ export const serve = () => {
     },
   });
 }
-
-/////////////////////////////////////////////////
-//-------------------CRITICAL------------------//
-/////////////////////////////////////////////////
-
-export const criticalCss = () => {
-  return app.src('./dist/css/style.min.css')
-    .pipe(extractCriticalCss())
-    .pipe(dest('./dist/css/'));
-}
-
 
 /////////////////////////////////////////////////
 //-------------------DEFAULT-------------------//
