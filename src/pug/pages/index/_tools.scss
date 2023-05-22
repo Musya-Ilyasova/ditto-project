@@ -28,23 +28,23 @@
 .tools-slider {
   margin: 40px 0 36px;
   @include mq('768') {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    grid-template-rows: auto;
-    grid-column-gap: 16px;
+    display: flex;
+    // grid-template-columns: 1fr 300px;
+    // grid-template-rows: auto;
+    // grid-column-gap: 16px;
     margin-top: 20px;
     margin-bottom: 25px;
     width: 100%;
   }
   @include mq('1024') {
-    grid-template-columns: 1fr 523px;
-    grid-template-rows: auto;
-    grid-column-gap: 16px;
+    // grid-template-columns: 1fr 523px;
+    // grid-template-rows: auto;
+    // grid-column-gap: 16px;
   }
   @include mq('1280') {
-    grid-template-columns: 1fr 523px;
-    grid-template-rows: auto;
-    grid-column-gap: 44px;
+    // grid-template-columns: 1fr 523px;
+    // grid-template-rows: auto;
+    // grid-column-gap: 44px;
     margin-top: 50px;
   }
 
@@ -52,6 +52,15 @@
     margin-bottom: 32px;
     position: relative;
     padding-left: 4px;
+    @include mq('768') {
+      width: calc(100% - 300px - 16px)!important;
+    }
+    @include mq('1024') {
+      width: calc(100% - 523px - 16px)!important;
+    }
+    @include mq('1280') {
+      width: calc(100% - 523px - 44px)!important;
+    }
     &:before {
       content: "";
       left: 0;
@@ -111,6 +120,7 @@
 
   &-gallary {
     overflow: visible!important;
+    width: 100%;
     @include mq('1024') {
       height: 100%;
     }
@@ -132,11 +142,15 @@
       margin-left: -16px;
       margin-right: -16px;
       overflow: hidden;
-      width: calc(100% + 32px);
+      width: calc(100% + 32px)!important;
       padding: 0 16px;
       @include mq('768') {
         display: flex;
         align-items: center;
+        width: calc(300px + 32px)!important;
+      }
+      @include mq('1024') {
+        width: calc(523px + 32px)!important;
       }
       @include mq('1280') {
         align-items: flex-start;
