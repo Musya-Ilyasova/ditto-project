@@ -41,14 +41,13 @@
       flex-direction: column!important;
       flex-wrap: nowrap!important;
       width: fit-content!important;
-
     }
     span {
       display: inline-block;
       width: auto;
       text-align: center;
       height: 100%;
-      @include mq('768') {
+      @include mq('1280') {
         padding-top: 3px;
       }
     }
@@ -100,9 +99,10 @@
         display: none;
       }
       img {
+        max-width: 333px;
         width: 100%;
-        height: 100%;
-        object-fit: contain;
+        height: auto;
+        margin: 0 auto;
       }
     }
     &_desktop {
