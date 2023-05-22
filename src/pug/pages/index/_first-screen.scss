@@ -99,6 +99,11 @@
       @include mq('1024') {
         display: none;
       }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
     &_desktop {
       display: none;
@@ -123,7 +128,8 @@
       &:after {
         transform: translate(-50%, -50%) scale(0.7);
       }
-      img {
+      picture {
+        overflow: hidden;
         position: absolute;
         width: 95px;
         height: 121px;
@@ -160,6 +166,11 @@
         &:nth-child(6) {
           left: 84px;
           top: 12px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
         }
       }
     }

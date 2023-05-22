@@ -3,12 +3,12 @@ const firstScreenParralaxImg = () => {
   imgX = img.offsetLeft+(img.offsetWidth/2),
   imgY = img.offsetTop+(img.offsetHeight/2);
 
-  let img1 = img.querySelector('img:first-child'),
-      img2 = img.querySelector('img:nth-child(2)'),
-      img3 = img.querySelector('img:nth-child(3)'),
-      img4 = img.querySelector('img:nth-child(4)'),
-      img5 = img.querySelector('img:nth-child(5)'),
-      img6 = img.querySelector('img:nth-child(6)');
+  let img1 = img.querySelector('picture:first-child'),
+      img2 = img.querySelector('picture:nth-child(2)'),
+      img3 = img.querySelector('picture:nth-child(3)'),
+      img4 = img.querySelector('picture:nth-child(4)'),
+      img5 = img.querySelector('picture:nth-child(5)'),
+      img6 = img.querySelector('picture:nth-child(6)');
   window.addEventListener('mousemove', function(e) {
     let x = (e.clientX - imgX) / 100;
     let y = (e.clientY - imgY) / 100;

@@ -7,14 +7,16 @@ section.platform
     .platform-list__wrapper
       ul.platform-list.keen-slider
         li.platform-list__item.keen-slider__slide.active
-          .platform-list__img.platform-list__img_first
+          picture.platform-list__img.platform-list__img_first
+            source(srcset="./img/platform/platform-1.webp, ./img/platform/platform-1@2x.webp 2x" type="image/webp")
             img(srcset="./img/platform/platform-1@2x.png" src="./img/platform/platform-1.png", alt="")
           .platform-list__content
             span.platform-list__title No-code automation builder
             p.platform-list__text A new solution for users looking to build, edit and track automation workflows in Web3 & Web2 applications. Our product is the perfect choice for users looking for an efficient, reliable, and secure way to automate their processes.
             button(type="button").btn.btn_secondary.platform__btn Learn more
         li.platform-list__item.keen-slider__slide
-          .platform-list__img.platform-list__img_second
+          picture.platform-list__img.platform-list__img_second
+            source(srcset="./img/platform/platform-2.webp, ./img/platform/platform-2@2x.webp 2x" type="image/webp")
             img(srcset="./img/platform/platform-2@2x.png" src="./img/platform/platform-2.png", alt="")
           .platform-list__content
             span.platform-list__title Keeper service
@@ -22,7 +24,8 @@ section.platform
             p.platform-list__text The next generation of Web 3 transactions automation helping users to create conditional execution of their smart contract functions through a hyper-reliable and decentralized automation platform. It uses a sophisticated system of conditional execution to ensure that users can accurately and securely execute their transactions with a maximum reliability.
             button(type="button").btn.btn_secondary.platform__btn Learn more
         li.platform-list__item.keen-slider__slide
-          .platform-list__img.platform-list__img_third
+          picture.platform-list__img.platform-list__img_third
+            source(srcset="./img/platform/platform-3.webp, ./img/platform/platform-3@2x.webp 2x" type="image/webp")
             img(srcset="./img/platform/platform-3@2x.png" src="./img/platform/platform-3.png", alt="")
           .platform-list__content
             span.platform-list__title Unified infrastructure
