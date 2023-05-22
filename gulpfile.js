@@ -1,5 +1,5 @@
 import pkg from 'gulp';
-import { pug, sass, scriptsLibs, scripts, img, imgUpload, svg, copy, clear, clearCache } from './gulp/config/allTasks.js'
+import { pug, sass, scriptsLibs, scripts, img, imgUpload, webpImage, svg, copy, clear, clearCache } from './gulp/config/allTasks.js'
 import browserSync from 'browser-sync';
 
 
@@ -43,7 +43,7 @@ export const serve = () => {
 /////////////////////////////////////////////////
 
 export default series(
-  parallel(copy, img, imgUpload, svg),
+  parallel(copy, img, imgUpload, webpImage, svg),
   parallel(pug, scriptsLibs, scripts, sass),
   parallel(observe, serve)
 );
@@ -54,6 +54,6 @@ export default series(
 
 export const build = series(
   clear, clearCache,
-  parallel(copy, img, imgUpload, svg),
+  parallel(copy, img, imgUpload, webpImage, svg),
   parallel(pug, scripts, sass)
 );
