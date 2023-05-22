@@ -17,7 +17,7 @@
     clip-path: ellipse(160% 100% at 50% -34%);
     @include mq('768') {
       clip-path:  ellipse(114% 100% at 50% -22%);
-      height: 430px;
+      height: 330px;
     }
   }
   &__title {

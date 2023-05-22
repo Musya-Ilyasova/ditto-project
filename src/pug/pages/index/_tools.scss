@@ -111,6 +111,10 @@
 
   &-gallary {
     overflow: visible!important;
+    @include mq('1024px') {
+      width: 100%;
+      height: 100%;
+    }
     &__item {
       display: flex;
       justify-content: center;
