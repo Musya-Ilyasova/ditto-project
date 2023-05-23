@@ -30,6 +30,7 @@ const titleSlider = () => {
           }, 1000)
         }
         slider.on("created", () => {
+          slider.slides.forEach(item => item.style.display="");
           slider.container.addEventListener("mouseover", () => {
             mouseOver = true
             clearNextTimeout()
