@@ -30,6 +30,7 @@ body {
   overflow-anchor: auto;
   scroll-behavior: smooth;
   text-rendering: auto;
+  font-variant-ligatures: none;
   @include mq('768') {
     font-size: 18px;
   }
