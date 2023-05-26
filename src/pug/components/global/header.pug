@@ -1,18 +1,64 @@
 //header
 header.header.show
   .container.header__container
-    a.logo.header__logo(href="./") Ditto logo
+    a.logo(href="./") Ditto logo
       +icon("logo")
-    .header-menu__wrapper
-      button.header-menu__close x
+    .menu__wrapper.header__menu
+      a.logo.menu__logo(href="./") Ditto logo
+        +icon("logo")
+      button.menu__close x
       nav
-        ul.header-menu
-          li.header-menu__item
-            a.header-menu__link(href="#") Docs
-          li.header-menu__item
-            a.header-menu__link(href="#") Cases
-          li.header-menu__item
-            a.header-menu__link(href="#") Roadmap
+        ul.menu
+          li.menu__item
+            span.menu__link.menu__link_submenu Discover
+              +icon('chevron')
+            ul.menu__submenu
+              li.menu__subitem
+                a(href="").menu__sublink
+                  +icon('cases')
+                  | Use cases
+              li.menu__subitem
+                a(href="").menu__sublink
+                  +icon('docs')
+                  | Documentation
+                  +icon('arrow-diag')
+              li.menu__subitem
+                a(href="").menu__sublink
+                  +icon('blog')
+                  | Blog
+                  +icon('arrow-diag')
+              li.menu__subitem
+                a(href="").menu__sublink
+                  +icon('career')
+                  | Careers
+          li.menu__item
+            span.menu__link.menu__link_submenu Products
+              +icon('chevron')
+            ul.menu__submenu
+              li.menu__subitem
+                a(href="").menu__sublink
+                  +icon('cases')
+                  | Use cases
+              li.menu__subitem
+                a(href="").menu__sublink
+                  +icon('docs')
+                  | Documentation
+                  +icon('arrow-diag')
+          li.menu__item
+            a.menu__link(href="#") Contact us
+      ul.soc-list.menu__soc
+        li.soc-list__item
+          a.soc-list__link(href="#") twitter
+            +icon('tw')
+        li.soc-list__item
+          a.soc-list__link(href="#") discord
+            +icon('dc')
+        li.soc-list__item
+          a.soc-list__link(href="#") telegram
+            +icon('tg-f')
+        li.soc-list__item
+          a.soc-list__link(href="#") github
+            +icon('g-hub')
       a(href="#").btn.btn_third.header__btn Enter App
     button.header__burger menu button
       +icon('burger')
