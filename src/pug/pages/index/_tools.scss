@@ -29,6 +29,7 @@
   margin: 40px 0 36px;
   @include mq('768') {
     display: flex;
+    align-items: center;
     margin-top: 20px;
     margin-bottom: 25px;
     width: 100%;
@@ -110,15 +111,11 @@
   &-gallary {
     overflow: visible!important;
     width: 100%;
-    @include mq('1024') {
-      height: 100%;
-    }
     &__item {
       display: flex;
       justify-content: center;
       border-radius: 32px;
       overflow: hidden;
-      // background: $tools-bg;
       border-radius: 32px;
       border: 1px solid $tools-br;
       &:first-child {
@@ -126,20 +123,23 @@
           object-position: right bottom;
         }
       }
+      @include mq('768') {
+        min-width: 100%!important;
+      }
     }
     &__wrapper {
       margin-left: -16px;
       margin-right: -16px;
       overflow: hidden;
-      width: calc(100% + 32px)!important;
+      width: calc(100% + 32px);
       padding: 0 16px;
       @include mq('768') {
-        display: flex;
-        align-items: center;
-        width: calc(300px + 32px)!important;
+        width: 300px;
+        margin: 0;
+        padding: 0;
       }
       @include mq('1024') {
-        width: calc(523px + 32px)!important;
+        width: 523px;
       }
       @include mq('1280') {
         align-items: flex-start;

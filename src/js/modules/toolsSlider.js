@@ -21,11 +21,18 @@ const toolsSlider = () => {
       }
 
       slider.on("created", () => {
-        addActive(slider.track.details.rel)
-        addClickEvents()
+        addActive(slider.track.details.rel);
+        addClickEvents();
+        if(main.size>=713 && main.size<1110) {
+          document.querySelector('.tools-slider-gallary__wrapper').style.width = '300px';
+          main.update();
+        } else if(main.size===1110) {
+          document.querySelector('.tools-slider-gallary__wrapper').style.width = '523px';
+          main.update();
+        }
         main.on("animationStarted", (main) => {
           removeActive()
-          const next = main.animator.targetIdx || 0
+          const next = main.animator.targetIdx || 0;
           addActive(main.track.absToRel(next))
           slider.moveToIdx(Math.min(slider.track.details.maxIdx, next))
         })
