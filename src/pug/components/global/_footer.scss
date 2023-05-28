@@ -10,31 +10,12 @@
     width: 132px;
     height: 46px;
   }
-  &__btn.btn {
-    color: $text-white;
-    margin-top: 27px;
-    @include mq('768') {
-      width: auto;
-      margin: 12px auto 0;
-      font-size: 18px;
-    }
-    @include mq('1024') {
-      margin-right: 0;
-      margin-top: 0;
-    }
-    @include mq('1280') {
-      padding: 0 30px;
-      height: 65px;
-      line-height: 65px;
-    }
-  }
-  &__text {
-    margin: 33px 0;
-    max-width: 450px;
-  }
   &__container {
     display: flex;
     flex-wrap: wrap;
+    @include mq('768') {
+      justify-content: space-between;
+    }
   }
   &__bottom {
     order: 2;
@@ -49,7 +30,6 @@
   }
   &__copyright {
     order: 2;
-    text-align: center;
     width: 100%;
     margin-top: 42px;
     @include mq('768') {
@@ -71,7 +51,8 @@
     }
   }
   &__soc{
-    margin-top: 74px;
+    margin-top: 26px;
+    justify-content: flex-start;
     @include mq('768') {
       width: auto;
       margin-top: 50px;
@@ -89,9 +70,12 @@
   margin-top: 48px;
   @include mq('768') {
     margin-top: 0;
+    width: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
   }
   @include mq('1024') {
-    width: auto;
+    flex-grow: 1;
   }
   &__title {
     color: $footer-title;
@@ -104,13 +88,17 @@
   &__item {
     margin-right: 14%;
     font-weight: 600;
-    @include mq('1024') {
+    @include mq('768') {
       margin-right: 38px;
       max-width: 152px;
     }
-    @include mq('1280') {
-      margin-right: 48px;
-
+    @include mq('1024') {
+      margin-right: 18.3%;
+    }
+    &:last-child {
+      @include mq('1024') {
+        margin-right: 0;
+      }
     }
   }
   &__list {
