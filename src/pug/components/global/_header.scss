@@ -5,7 +5,6 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: $header-bg;
   transform: translateY(-100%);
   transition: all 0.2s ease-in-out;
   @include mq('768') {
@@ -13,11 +12,12 @@
   }
   &.show {
     transform: translateY(0);
-    backdrop-filter: blur(5px);
   }
   &.scroll {
     padding: 20px 0;
     box-shadow: 0 20px 24px -4px rgba(43,39,35,.08), 0 8px 8px -4px rgba(43,39,35,.03);
+    background: $header-bg;
+    backdrop-filter: blur(5px);
     .menu__close {
       top: 24px;
     }

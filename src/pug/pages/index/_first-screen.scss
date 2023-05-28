@@ -2,13 +2,63 @@
 .first-sc {
   padding-top: 112px;
   padding-bottom: 42px;
+  position: relative;
   @include mq('768') {
     padding-top: 124px;
     padding-bottom: 55px;
   }
   @include mq('1024') {
     padding-top: 164px;
+    overflow-x: hidden;
   }
+
+
+  &:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    border-radius: 24px;
+    @include mq('1024') {
+      background-image: url(../img/first-sc/first-sc-back@2x.png);
+      background-image: -webkit-image-set(
+        url(../img/first-sc/first-sc-back@2x.webp) type('image/webp'),
+        url(../img/first-sc/first-sc-back@2x.png));
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 550px;
+    }
+    @include mq('1280') {
+      height: 470px;
+      right: -50px;
+      bottom: 40px
+    }
+    @include mq('1440') {
+      height: 479px;
+      right: -80px;
+      bottom: 20px
+    }
+    @include mq('1600') {
+      right: -100px;
+      height: 550px;
+      width: 800px;
+      background-position: bottom -119px right;
+    }
+    @include mq('1920') {
+      right: 0;
+      height: 676px;
+      width: 930px;
+      background-position: bottom -154px right;
+    }
+    @include mq('2400') {
+      right: 0;
+      height: 676px;
+      width: 1089px;
+      background-position: bottom -330px right;
+    }
+  }
+
   &__title {
     margin-bottom: 24px;
     @include mq('1280') {
@@ -114,59 +164,34 @@
         height: 100%;
         position: relative;
       }
-      &:before, &:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1);
-        background: $cicle;
-        border-radius: 50%;
-      }
-      &:after {
-        transform: translate(-50%, -50%) scale(0.7);
-      }
       picture {
         overflow: hidden;
         position: absolute;
-        width: 95px;
-        height: 121px;
+        width: 300px;
         object-fit: contain;
         z-index: 2;
         border-radius: 11.5px;
         box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
         &:first-child {
-          bottom: 10px;
-          right: 36px;
+          bottom: 29px;
+          left: -31px;
           z-index: 4;
+          height: 218px;
+          @include mq('1920') {
+            left: -51px;
+          }
         }
         &:nth-child(2) {
-          left: 9px;
-          bottom: 53px;
+          top: -40px;
+          right: -85px;
+          height: 158px;
+          @include mq('2400') {
+            right: -185px;
+            top: -50px;
+
+          }
         }
-        &:nth-child(3) {
-          right: -91px;
-          bottom: 70px;
-          width: 458px;
-          height: 165px;
-          z-index: 3;
-        }
-        &:nth-child(4) {
-          left: -16px;
-          top: 123px;
-          width: 456px;
-          height: 177px;
-        }
-        &:nth-child(5) {
-          right: 150px;
-          top: 63px;
-        }
-        &:nth-child(6) {
-          left: 84px;
-          top: 12px;
-        }
+
         img {
           width: 100%;
           height: 100%;
