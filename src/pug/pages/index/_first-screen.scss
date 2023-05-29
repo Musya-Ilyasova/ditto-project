@@ -58,7 +58,6 @@
     height: 45px;
     position: relative;
     margin-top: 8px;
-    font-size: 32px;
     margin-left: 4px;
     @include mq('768') {
       margin-top: 0px;
@@ -82,8 +81,21 @@
       background: $main;
       border-radius: 16px;
       width: fit-content!important;
-      padding: 0 16px;
+      padding: 0 10px;
+      font-size: 22px;
+      @include mq('375') {
+        font-size: 24px;
+      }
+      @include mq('768') {
+        font-size: 26px;
+        padding: 0 10px;
+      }
+      @include mq('1024') {
+        font-size: 30px;
+        padding: 0 16px;
+      }
       @include mq('1280') {
+        font-size: 40px;
         padding-top: 3px;
       }
     }
