@@ -16,7 +16,7 @@
   &:before {
     content: "";
     position: absolute;
-    right: 0;
+    left: 55%;
     bottom: 0;
     width: 50%;
     border-radius: 24px;
@@ -27,35 +27,21 @@
         url(../img/first-sc/first-sc-back@2x.png));
       background-repeat: no-repeat;
       background-size: cover;
-      height: 550px;
+      background-position: left;
+      height: 470px;
+      bottom: 40px
     }
     @include mq('1280') {
       height: 470px;
-      right: -50px;
-      bottom: 40px
+      left: 57%;
     }
     @include mq('1440') {
       height: 479px;
-      right: -80px;
-      bottom: 20px
+      width: 884px;
+      aspect-ratio: 1 / 1;
     }
     @include mq('1600') {
-      right: -100px;
-      height: 550px;
-      width: 800px;
-      background-position: bottom -119px right;
-    }
-    @include mq('1920') {
-      right: 0;
-      height: 676px;
-      width: 930px;
-      background-position: bottom -154px right;
-    }
-    @include mq('2400') {
-      right: 0;
-      height: 676px;
-      width: 1089px;
-      background-position: bottom -330px right;
+      left: calc(50% + 84px);
     }
   }
 
@@ -185,11 +171,6 @@
           top: -40px;
           right: -85px;
           height: 158px;
-          @include mq('2400') {
-            right: -185px;
-            top: -50px;
-
-          }
         }
 
         img {
