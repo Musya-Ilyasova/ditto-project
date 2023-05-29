@@ -117,12 +117,6 @@
       border-radius: 32px;
       overflow: hidden;
       border-radius: 32px;
-      border: 1px solid $tools-br;
-      &:first-child {
-        img {
-          object-position: right bottom;
-        }
-      }
       @include mq('768') {
         min-width: 100%!important;
       }
