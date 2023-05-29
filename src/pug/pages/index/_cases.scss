@@ -141,8 +141,12 @@
       @include mq('768') {
         padding: 13px 16px;
       }
+      @include mq('1024') {
+        min-height: 88px;
+        display: flex;
+        align-items: center;
+      }
       p {
-        max-width: 640px;
         margin: 0 auto;
         font-size: 14px;
         @include mq('768') {
@@ -153,6 +157,12 @@
         @include mq('1280') {
           font-size: 22px;
           line-height: 1.4;
+        }
+        br {
+          display: none;
+          @include mq('1024') {
+            display: block;
+          }
         }
       }
     }
