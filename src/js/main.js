@@ -8,18 +8,24 @@ import titleSlider from "./modules/firstScreenSlider";
 import casesTabs from "./modules/casesTabs";
 import loadCss from "./modules/loadCss";
 import wow from "./modules/animated";
+import { animationPlay } from "./modules/lottie";
 
-loadCss('css/style.min.css');
+if(document.querySelector('main').classList.contains('index')) {
+  loadCss('css/style.min.css');
+}
 
 document.addEventListener("DOMContentLoaded",  () => {
   wow.init();
-  firstScreenParralaxImg();
-  titleSlider();
-  integrationsSlider();
-  platformSlider();
-  toolsSlider();
+  if(document.querySelector('main').classList.contains('index')) {
+    firstScreenParralaxImg();
+    titleSlider();
+    integrationsSlider();
+    platformSlider();
+    toolsSlider();
+    casesTabs();
+    animationPlay();
+  }
   addMenu();
   headerScroll();
   scrollToTheSection();
-  casesTabs();
 })

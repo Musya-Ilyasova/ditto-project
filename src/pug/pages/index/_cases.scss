@@ -122,16 +122,6 @@
       @include mq('768') {
         flex-grow: 3;
       }
-      img {
-        height: auto;
-        width: 100%;
-        object-fit: contain;
-        @include mq('768') {
-          height: 100%;
-          object-position: bottom;
-
-        }
-      }
     }
     &__bottom {
       text-align: center;

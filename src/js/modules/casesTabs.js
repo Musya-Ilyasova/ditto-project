@@ -1,3 +1,6 @@
+import { animation3, animation4, animation5, animation6, animation7 } from "./lottie";
+
+const animations = [animation3, animation4, animation5, animation6, animation7];
 const casesTabs = () => {
   const header = document.querySelector('.cases-tabs__btns'),
         tab = document.querySelectorAll('.cases-tabs__btn'),
@@ -12,9 +15,16 @@ const casesTabs = () => {
     })
   };
 
+  let firstRender = true;
+
   function showTabContent(i = 0) {
     content[i].classList.add('active');
     tab[i].classList.add('active');
+    if(!firstRender) {
+      animations[i].goToAndPlay(0);
+      animations[i].play();
+    }
+    firstRender = false;
   };
 
   hideTabContent();

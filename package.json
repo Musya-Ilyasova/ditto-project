@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "keen-slider": "^6.8.5",
+    "lottie-web": "^5.12.0",
     "svg4everybody": "^2.1.9",
     "wowjs": "^1.1.3"
   }

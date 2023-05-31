@@ -11,8 +11,6 @@
     padding-top: 164px;
     overflow-x: hidden;
   }
-
-
   &:before {
     content: "";
     position: absolute;
@@ -116,11 +114,12 @@
   }
   &__right {
     margin-top: 44px;
-    max-width: 582px;
+    max-width: 100%;
     min-height: 275px;
     margin: 44px auto 0;
+    margin-right: -16px;
     @include mq('768') {
-      margin-right: 0;
+      margin-right: -20px;
       width: 45%;
       max-width: 501px;
     }
@@ -128,6 +127,7 @@
       width: 486px;
       height: 486px;
       margin-top: -13px;
+      margin-right: 0;
     }
   }
   &__left {
@@ -147,10 +147,9 @@
         display: none;
       }
       img {
-        max-width: 333px;
         width: 100%;
         height: auto;
-        margin: 0 auto;
+        margin: 0 0 0 auto;
       }
     }
     &_desktop {
@@ -192,6 +191,5 @@
         }
       }
     }
-
   }
 }
