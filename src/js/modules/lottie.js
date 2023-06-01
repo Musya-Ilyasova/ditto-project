@@ -23,7 +23,11 @@ const animationOptions = (container, path) => {
     renderer: "svg",
     loop: false,
     autoplay: false,
-    path: path
+    progressiveLoad: true,
+    path: path,
+    rendererSettings: {
+      mount: false,
+    },
   }
 }
 

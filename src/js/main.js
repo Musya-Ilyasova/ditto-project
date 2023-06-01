@@ -9,6 +9,7 @@ import casesTabs from "./modules/casesTabs";
 import loadCss from "./modules/loadCss";
 import wow from "./modules/animated";
 import { animationPlay } from "./modules/lottie";
+import { validateInputEmail, formSubmit } from "./modules/form"
 
 if(document.querySelector('main').classList.contains('index')) {
   loadCss('css/style.min.css');
@@ -24,8 +25,12 @@ document.addEventListener("DOMContentLoaded",  () => {
     toolsSlider();
     casesTabs();
     animationPlay();
+    scrollToTheSection();
   }
   addMenu();
   headerScroll();
-  scrollToTheSection();
+  if(document.querySelector('main').classList.contains('contacts-page')) {
+    validateInputEmail();
+    formSubmit();
+  }
 })

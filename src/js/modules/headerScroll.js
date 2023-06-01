@@ -27,11 +27,11 @@ export const headerScroll = () => {
 }
 
 export const scrollToTheSection = () => {
-  const anchors = document.querySelectorAll('.header a[href*="#"]');
+  const anchors = document.querySelectorAll('.header a[href*="./#"]');
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      const blockID = anchor.getAttribute('href').substr(1);
+      const blockID = anchor.getAttribute('href').substr(3);
       let elem = document.getElementById(blockID),
       elemY = elem.getBoundingClientRect().top,
       elemH = elem.clientHeight,

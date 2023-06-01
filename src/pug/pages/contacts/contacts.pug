@@ -1,2 +1,25 @@
 section.contacts
-  .container
+  .container.contacts__container
+    .contacts__content
+      h1.contacts__title Reach out to us
+      p.contacts__text If you have any questions or suggestions - please talk to us and we will do our best to help you
+    form.form.contacts__form(action="")
+      .form__item
+        label.form__label(for="email") Email
+        input.form__input#email(type="email" name="email" placeholder="example@mail.com")
+        p.form__error-msg Wrong email
+      .form__item
+        label.form__label(for="telegram") Telegram
+        input.form__input#telegram(type="text" name="telegram" placeholder="@")
+      .form__item
+        label.form__label(for="name") Your name / Company name
+        input.form__input#name(type="text" name="name" placeholder="name")
+      .form__item
+        .form__label(for="message") Describe your inquiry
+        textarea.form__input.form__input_textarea#message(name="", cols="30", rows="10" placeholder="Leave us a message...")
+      .form__footer
+        button(type="submit").btn.btn_primary.contacts__btn Submit
+        a(href="").contacts__link Ask on Telegram
+
+
+
