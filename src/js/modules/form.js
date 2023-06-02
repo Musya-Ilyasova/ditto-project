@@ -21,6 +21,7 @@ export const formSubmit = () => {
     if(document.querySelector('#email').classList.contains('form__input_success')) {
       formBtn.classList.remove('disabled');
       form.submit();
+      form.reset();
     } else {
       formBtn.classList.add('disabled');
       document.querySelector('#email').classList.add('form__input_error')
