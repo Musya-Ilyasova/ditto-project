@@ -3,6 +3,9 @@ export const headerScroll = () => {
   const links = document.querySelectorAll('.menu__link_submenu');
   const overlay = document.querySelector('.overlay');
   let position = window.scrollY;
+  if(position != 0) {
+    header.classList.add('scroll');
+  }
   document.addEventListener('scroll', () => {
     if(window.scrollY <= 0) {
       setTimeout(() => {

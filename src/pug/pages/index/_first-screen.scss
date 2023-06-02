@@ -57,19 +57,19 @@
     position: relative;
     margin-top: 8px;
     margin-left: 4px;
+    display: inline-flex!important;
+    flex-direction: column!important;
+    flex-wrap: nowrap!important;
+    width: 257px!important;
     @include mq('768') {
       margin-top: 0px;
+      width: 257px!important;
     }
     @include mq('1280') {
       height: 56px;
       font-size: 40px;
       transform: translateY(-6px);
-    }
-    &[data-keen-slider-v] {
-      display: inline-flex!important;
-      flex-direction: column!important;
-      flex-wrap: nowrap!important;
-      width: fit-content!important;
+      width: 463px!important;
     }
     span {
       display: inline-block;
