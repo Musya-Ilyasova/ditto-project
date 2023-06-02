@@ -16,12 +16,17 @@ export const validateInputEmail = () => {
 export const formSubmit = () => {
   const form = document.querySelector('.form');
   const formBtn = form.querySelector('[type=submit]');
+  const successMsg = document.querySelector('.form__success');
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     if(document.querySelector('#email').classList.contains('form__input_success')) {
       formBtn.classList.remove('disabled');
-      form.submit();
-      form.reset();
+      successMsg.style.display="block";
+      setTimeout(function() {
+        successMsg.style.display="";
+        form.submit();
+        form.reset();
+      }, 1000);
     } else {
       formBtn.classList.add('disabled');
       document.querySelector('#email').classList.add('form__input_error')
