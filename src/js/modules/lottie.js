@@ -33,11 +33,13 @@ const animationOptions = (container, path) => {
 
 const animation1 = lottie.loadAnimation(animationOptions(container1, path1));
 const animation2 = lottie.loadAnimation(animationOptions(container2, path2));
-export const animation3 = lottie.loadAnimation(animationOptions(container3, path3));
-export const animation4 = lottie.loadAnimation(animationOptions(container4, path4));
-export const animation5 = lottie.loadAnimation(animationOptions(container5, path5));
-export const animation6 = lottie.loadAnimation(animationOptions(container6, path6));
-export const animation7 = lottie.loadAnimation(animationOptions(container7, path7));
+const animation3 = lottie.loadAnimation(animationOptions(container3, path3));
+const animation4 = lottie.loadAnimation(animationOptions(container4, path4));
+const animation5 = lottie.loadAnimation(animationOptions(container5, path5));
+const animation6 = lottie.loadAnimation(animationOptions(container6, path6));
+const animation7 = lottie.loadAnimation(animationOptions(container7, path7));
+
+const animations = [animation3, animation4, animation5, animation6, animation7];
 
 const animationVisible = (container, animation) => {
   const target = document.querySelector(container);
@@ -56,6 +58,24 @@ const animationVisible = (container, animation) => {
     }
   }
 };
+
+const restartAnimation = (i, firstRender) => {
+  if(!firstRender) {
+    animations[i].goToAndPlay(0);
+    animations[i].play();
+  }
+  firstRender = false;
+}
+
+export const tabsAnimationStart = () => {
+  let firstRender = false;
+  const tabs = document.querySelectorAll('.cases-tabs__btn');
+  tabs.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      restartAnimation(i, firstRender);
+    })
+  })
+}
 
 export const animationPlay = () => {
   window.addEventListener('scroll', () => {

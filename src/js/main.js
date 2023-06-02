@@ -8,7 +8,6 @@ import titleSlider from "./modules/firstScreenSlider";
 import casesTabs from "./modules/casesTabs";
 import loadCss from "./modules/loadCss";
 import wow from "./modules/animated";
-import { animationPlay } from "./modules/lottie";
 import { validateInputEmail, formSubmit } from "./modules/form"
 
 if(document.querySelector('main').classList.contains('index')) {
@@ -24,7 +23,6 @@ document.addEventListener("DOMContentLoaded",  () => {
     platformSlider();
     toolsSlider();
     casesTabs();
-    animationPlay();
     scrollToTheSection();
   }
   addMenu();

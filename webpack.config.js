@@ -12,7 +12,10 @@ const paths = {
 };
 
 export const webpackConfig = (isMode) => ({
-  entry: ['@babel/polyfill', `${paths.src}/js/main.js`],
+  entry: {
+    main:  ['@babel/polyfill', `${paths.src}/js/main.js` ],
+    lottie: [`${paths.src}/js/lottie.js`]
+  },
   mode: isMode ? 'development' : 'production',
   cache: {
     type: 'filesystem', // По умолчанию 'memory'
@@ -20,7 +23,7 @@ export const webpackConfig = (isMode) => ({
   },
   output: {
     path: `${paths.build}/js`,
-    filename: 'main.min.js',
+    filename: '[name].min.js',
     publicPath: '/',
   },
   module: {

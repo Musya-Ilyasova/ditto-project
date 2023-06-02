@@ -21,9 +21,9 @@ export const scriptsLibs = () => {
 
 export const scripts = () => {
   return app
-    .src("src/js/main.js", { sourcemaps: app.isDev })
+    .src("src/js/*.js", { sourcemaps: app.isBuild })
     .pipe($.plumber())
-    .pipe(webpack({ config: webpackConfig(app.isDev) }))
+    .pipe(webpack({ config: webpackConfig(app.isBuild) }))
     .pipe(app.dest("dist/js/"))
     .pipe(strip())
     .pipe(app.reload({
