@@ -24,12 +24,6 @@
     @include mq('1280') {
       white-space: wrap;
     }
-
-  }
-  &__text {
-    text-align: center;
-    margin: 26px 0;
-    font-weight: 500;
   }
   .icon {
     width: 40px;
@@ -48,7 +42,6 @@
     grid-template-rows: repeat(2, auto);
     grid-gap: 32px;
     margin-top: 44px;
-    padding-top: 20px;
   }
   &__item {
     border: 0.5px solid $black;
