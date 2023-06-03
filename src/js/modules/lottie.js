@@ -8,14 +8,6 @@ const container1 = '#js-animation-1',
       path2 = './js/animations/2.json',
       container3 = '#js-animation-3',
       path3 = './js/animations/3.json';
-      // container4 = '#js-animation-4',
-      // path4 = './js/animations/4.json',
-      // container5 = '#js-animation-5',
-      // path5 = './js/animations/5.json',
-      // container6 = '#js-animation-6',
-      // path6 = './js/animations/6.json',
-      // container7 = '#js-animation-7',
-      // path7 = './js/animations/7.json';
 
 export const animationOptions = (container, path) => {
   return {
