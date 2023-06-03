@@ -43,6 +43,7 @@
   }
   &__btn.btn {
     margin-top: 24px;
+    margin-bottom: 60px;
     @include mq('768') {
       width: 139px;
       margin-top: 0;
