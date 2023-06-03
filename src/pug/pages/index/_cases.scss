@@ -119,6 +119,8 @@
     }
     &__top {
       overflow: hidden;
+      width: 100%;
+      aspect-ratio: 1110 / 488;
       @include mq('768') {
         flex-grow: 3;
       }

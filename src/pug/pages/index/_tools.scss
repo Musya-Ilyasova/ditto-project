@@ -69,6 +69,7 @@
       overflow: visible!important;
       height: fit-content;
       min-height: calc(545px / 4) !important;
+      cursor: pointer;
       @include mq('768') {
         padding: 16px 20px 18px;
       }
@@ -126,6 +127,8 @@
       overflow: hidden;
       width: calc(100% + 32px);
       padding: 0 16px;
+      min-height: 100%;
+      flex-shrink: 1;
       @include mq('768') {
         width: 300px;
         margin: 0;
