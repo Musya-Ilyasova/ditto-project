@@ -31,6 +31,7 @@ export const headerScroll = () => {
 
 export const scrollToTheSection = () => {
   const anchors = document.querySelectorAll('.header a[href*="./#"]');
+  const header = document.querySelector('.header');
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -41,6 +42,12 @@ export const scrollToTheSection = () => {
       wHeight = document.documentElement.clientHeight,
       height = (wHeight - elemH) / 2,
       scrollheight = elemY - height;
+      if(window.innerWidth < "768") {
+        if(document.querySelector('.menu__wrapper').classList.contains('show')) {
+          document.querySelector('.menu__wrapper').classList.remove('show');
+          document.body.style.overflow = '';
+        }
+      }
       window.scrollBy({
         top: scrollheight,
         left: 0,

@@ -106,14 +106,9 @@
   }
   &__img {
     overflow: visible;
-    width: 280px;
-    height: 280px;
-    margin: 3px auto 0;
+    width: 100%;
+    height: auto;
     display: flex;
-    @include mq('375') {
-      width: 344px;
-      height: 340px;
-    }
     @include mq('768') {
       width: 300px;
       height: 300px;
