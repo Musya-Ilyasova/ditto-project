@@ -60,16 +60,16 @@
     display: inline-flex!important;
     flex-direction: column!important;
     flex-wrap: nowrap!important;
-    width: 257px!important;
+    width: 280px!important;
     @include mq('768') {
       margin-top: 0px;
-      width: 257px!important;
+      width: 309px!important;
     }
     @include mq('1280') {
       height: 56px;
       font-size: 40px;
       transform: translateY(-6px);
-      width: 463px!important;
+      width: 470px!important;
     }
     span {
       display: inline-block;
