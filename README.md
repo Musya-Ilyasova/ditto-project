@@ -4,7 +4,7 @@ Project based on gulp v4
 
 ## Installation
 
-* Node version must be 12.14+ (use nvm if necessary). [nvm](https://github.com/creationix/nvm). Or just read console if you get error (mostly it'll be node-sass. Just rebuild it)
+* Node version must be 16+ (use nvm if necessary). [nvm](https://github.com/creationix/nvm). Or just read console if you get error (mostly it'll be node-sass. Just rebuild it)
 * Install all packages
 ```bash
 npm -i
@@ -46,8 +46,8 @@ npm i #library-name
 ___
 
 ## Структура проекта
-* src/files - фавиконки, шрифты (только woff и woff2) и прочие карты сайтов. При билде тупо копирует всё в корень папки build 
-* img - неожиданно, картинки. Сжимаются и копируются в build/img
+* src/files - фавиконки, шрифты (только woff и woff2) и прочие карты сайтов. При билде тупо копирует всё в корень папки build
+* img - картинки. Сжимаются и копируются в build/img
 * js - в папку modules добавляются модули. В main.js они подключаются. Сжимаются и копируются в build/js/main.min.js. Библиотеки подключаются в gulpfile, таска 'scripts:libs'. Потом они сжимаются в отдельный файл build/js/libs.min.js
 * pug - это будущий html. Туда же кидаются одноименные sass-файлы (подключаются в sass/components)
   * components - папка для "компонентов" - переиспользуемых элементов интерфейса (формы, навигация и тп). Здесь же лежат стили для этих компонентов (подключать в sass/global/components/components.scss)
@@ -63,7 +63,7 @@ ___
       * modals. Здесь можно хранить файлы стилей для разных модалок. Собирать в modals.scss
     * helpers - всякое разное. Собирается в helpers.scss
       * _base.scss - самые базовые стили, своего рода фиксы стандартных стилей браузера
-      * _fonts.scss - подключение шрифтов с примером. Важно - если шрифт одного семейства ("TT Norms", к примеру), то имя для всех начертаний это шрифта должно быть одинаково, различия только в параметрах ниже. 
+      * _fonts.scss - подключение шрифтов с примером. Важно - если шрифт одного семейства ("TT Norms", к примеру), то имя для всех начертаний это шрифта должно быть одинаково, различия только в параметрах ниже.
       * _normalize.scss - стандартизируем стили разных браузеров
       * _pages.scss - стили для навигации по сайту _pages.pug
       * _typography.scss - базовые настройки шрифтов
