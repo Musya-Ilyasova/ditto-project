@@ -116,7 +116,6 @@
     &__item {
       display: flex;
       justify-content: center;
-      border-radius: 32px;
       @include mq('768') {
         min-width: 100%!important;
       }
