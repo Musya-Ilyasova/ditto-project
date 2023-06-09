@@ -8,7 +8,7 @@ import titleSlider from "./modules/firstScreenSlider";
 import casesTabs from "./modules/casesTabs";
 import loadCss from "./modules/loadCss";
 import wow from "./modules/animated";
-import { validateInputEmail, formSubmit } from "./modules/form"
+import { validateInputEmail, formSubmit, addResponseMsg } from "./modules/form"
 
 if(document.querySelector('main').classList.contains('index')) {
   loadCss('css/style.min.css');
@@ -30,5 +30,6 @@ document.addEventListener("DOMContentLoaded",  () => {
   if(document.querySelector('main').classList.contains('contacts-page')) {
     validateInputEmail();
     formSubmit();
+    addResponseMsg();
   }
 })

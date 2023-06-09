@@ -57,17 +57,19 @@
   }
 }
 
-.form__success {
+.form__response {
   position: absolute;
   top: 30%;
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 200px;
-  height: 80px;
+  width: 232px;
   display: none;
   text-align: center;
-  padding: 26px 0;
+  padding: 20px;
   background: rgba(var(--black-rgb), 0.6);
   color: white;
+  &_error {
+    background: rgba(var(--red-rgb), 0.8);
+  }
 }

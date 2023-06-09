@@ -16,20 +16,31 @@ export const validateInputEmail = () => {
 export const formSubmit = () => {
   const form = document.querySelector('.form');
   const formBtn = form.querySelector('[type=submit]');
-  const successMsg = document.querySelector('.form__success');
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     if(document.querySelector('#email').classList.contains('form__input_success')) {
       formBtn.classList.remove('disabled');
-      successMsg.style.display="block";
-      setTimeout(function() {
-        successMsg.style.display="";
-        form.submit();
-        form.reset();
-      }, 1000);
+      form.submit();
     } else {
       formBtn.classList.add('disabled');
       document.querySelector('#email').classList.add('form__input_error')
     }
   })
+}
+
+const showHideMsg = (msg) => {
+  msg.style.display = "block";
+  setTimeout(() => {
+    msg.style.display = "";
+  }, 2000)
+}
+
+export const addResponseMsg = () => {
+  const responseMsgSuccess = document.querySelector('.form__response_success');
+  const responseMsgError = document.querySelector('.form__response_error');
+  if(location.hash === "#send-success") {
+    showHideMsg(responseMsgSuccess);
+  } else if(location.hash === "#send-fail") {
+    showHideMsg(responseMsgError);
+  }
 }
