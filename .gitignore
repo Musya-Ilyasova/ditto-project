@@ -2,3 +2,4 @@
 /dist
 /.temporary_cache
 .vercel
+.env
