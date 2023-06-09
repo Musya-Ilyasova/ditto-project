@@ -19,7 +19,7 @@ section.contacts
         textarea.form__input.form__input_textarea#message(name="", cols="30", rows="10" placeholder="Leave us a message...")
       .form__footer
         button(type="submit").btn.btn_primary.contacts__btn Submit
-        a(href="").contacts__link Ask on Telegram
+        a(href=process.env.SOC_TELEGRAM).contacts__link Ask on Telegram
   .form__response.form__response_success
     p Successfully sent!
   .form__response.form__response_error
