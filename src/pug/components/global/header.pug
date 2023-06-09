@@ -1,10 +1,10 @@
 //header
 header.header.show
   .container.header__container
-    a.logo(href="./") Ditto logo
+    a.logo(href=process.env.MAIN_LINK) Ditto logo
       +icon("logo")
     .menu__wrapper.header__menu
-      a.logo.menu__logo(href="./") Ditto logo
+      a.logo.menu__logo(href=process.env.MAIN_LINK) Ditto logo
         +icon("logo")
       button.menu__close x
       nav
@@ -18,36 +18,36 @@ header.header.show
                   +icon('cases')
                   | Use cases
               li.menu__subitem
-                a(href="https://ditto-network.gitbook.io/ditto-network-docs/" target="_blank").menu__sublink
+                a(href=process.env.HEADER_LINK_DOCS target="_blank").menu__sublink
                   +icon('docs')
                   | Documentation
                   +icon('arrow-diag')
               li.menu__subitem
-                a(href="https://medium.com/@dittonetwork").menu__sublink
+                a(href=process.env.HEADER_LINK_BLOG).menu__sublink
                   +icon('blog')
                   | Blog
                   +icon('arrow-diag')
               li.menu__subitem
-                a(href="").menu__sublink
+                a(href=process.env.HEADER_LINK_CAREERS).menu__sublink
                   +icon('career')
                   | Careers
           li.menu__item
             a.menu__link(href="./#platform") Products
           li.menu__item
-            a.menu__link(href="/contacts.html") Contact us
+            a.menu__link(href=process.env.HEADER_LINK_CONTACTS) Contact us
       ul.soc-list.menu__soc
         li.soc-list__item
-          a.soc-list__link(href="https://twitter.com/DittoAutomation") twitter
+          a.soc-list__link(href=process.env.SOC_TWITTER) twitter
             +icon('tw')
         li.soc-list__item
-          a.soc-list__link(href="#") discord
+          a.soc-list__link(href=process.env.SOC_DISCORD) discord
             +icon('dc')
         li.soc-list__item
-          a.soc-list__link(href="#") telegram
+          a.soc-list__link(href=process.env.SOC_TELEGRAM) telegram
             +icon('tg-f')
         li.soc-list__item
-          a.soc-list__link(href="#") github
+          a.soc-list__link(href=process.env.SOC_GITHUB) github
             +icon('g-hub')
-      a(href="#").btn.btn_third.header__btn Enter App
+      a(href=process.env.LINK_APP).btn.btn_third.header__btn Enter App
     button.header__burger menu button
       +icon('burger')

@@ -2,45 +2,45 @@
 footer.footer
   .container.footer__container
     .footer__left
-      a.logo.footer__logo(href="./") Ditto logo
+      a.logo.footer__logo(href=process.env.MAIN_LINK) Ditto logo
         +icon('logo-f')
     ul.footer-nav
       li.footer-nav__item
         span.footer-nav__title Product
         ul.footer-nav-list.footer-nav__list
           li.footer-nav-list__item
-            a.footer-nav-list__link(href="#") For companies
+            a.footer-nav-list__link(href=process.env.FOOTER_LINK_FOR_COMPANIES) For companies
           li.footer-nav-list__item
-            a.footer-nav-list__link(href="#") For developers
+            a.footer-nav-list__link(href=process.env.FOOTER_LINK_FOR_DEVELOPERS) For developers
           li.footer-nav-list__item
-            a.footer-nav-list__link(href="./contacts.html") Contact us
+            a.footer-nav-list__link(href=process.env.FOOTER_LINK_CONTACTS) Contact us
       li.footer-nav__item
         span.footer-nav__title Resources
         ul.footer-nav-list.footer-nav__list
           li.footer-nav-list__item
-            a.footer-nav-list__link(href="https://medium.com/@dittonetwork") Blog
+            a.footer-nav-list__link(href=process.env.FOOTER_LINK_BLOG) Blog
           li.footer-nav-list__item
-            a.footer-nav-list__link(href="https://ditto-network.gitbook.io/ditto-network-docs/" target="_blank") Documentation
+            a.footer-nav-list__link(href=process.env.FOOTER_LINK_DOCS target="_blank") Documentation
       li.footer-nav__item
         span.footer-nav__title Legal
         ul.footer-nav-list.footer-nav__list
           li.footer-nav-list__item
-            a.footer-nav-list__link(href="#") Terms & Conditions
+            a.footer-nav-list__link(href=process.env.FOOTER_LINK_TERMS_CONDITIONS) Terms & Conditions
           li.footer-nav-list__item
-            a.footer-nav-list__link(href="#") Privacy Policy
+            a.footer-nav-list__link(href=process.env.FOOTER_LINK_PRIVACY_POLICY) Privacy Policy
     .footer__bottom
       p.footer__copyright &copy; 2023 Ditto. All rights reserved.
       ul.soc-list.footer__soc
         li.soc-list__item
-          a.soc-list__link(href="#") twitter
+          a.soc-list__link(href=process.env.SOC_TWITTER) twitter
             +icon('tw')
         li.soc-list__item
-          a.soc-list__link(href="#") discord
+          a.soc-list__link(href=process.env.SOC_DISCORD) discord
             +icon('dc')
         li.soc-list__item
-          a.soc-list__link(href="#") telegram
+          a.soc-list__link(href=process.env.SOC_TELEGRAM) telegram
             +icon('tg-f')
         li.soc-list__item
-          a.soc-list__link(href="#") github
+          a.soc-list__link(href=process.env.SOC_GITHUB) github
             +icon('g-hub')
 
