@@ -15,14 +15,23 @@ const closeMenu = (selectorClose, menu) => {
 }
 
 const openSubMenu = (links, link, overlay) => {
-  links.forEach(item => item.classList.remove('active'));
-  link.classList.add('active');
+  links.forEach(item => item.parentNode.classList.remove('active'));
+  link.parentNode.classList.add('active');
   overlay.style.display = "block";
 }
 
 const closeSubMenu = (links, overlay) => {
-  links.forEach(item => item.classList.remove('active'));
+  links.forEach(item => item.parentNode.classList.remove('active'));
   overlay.style.display = "";
+}
+
+const toggleSubMenuMobile = (links, link) => {
+  if(link.parentNode.classList.contains('active')) {
+    links.forEach(item => item.parentNode.classList.remove('active'));
+  } else {
+    links.forEach(item => item.parentNode.classList.remove('active'));
+    link.parentNode.classList.add('active');
+  }
 }
 
 const addMenu = () => {
@@ -34,8 +43,12 @@ const addMenu = () => {
   openMenu('.header__burger', menu);
   closeMenu('.menu__close', menu);
   links.forEach(link => {
-    link.addEventListener('mouseover', () => openSubMenu(links, link, overlay));
-    link.addEventListener('click', () => openSubMenu(links, link, overlay));
+    if(window.innerWidth<"768") {
+      link.parentNode.addEventListener('click', () => toggleSubMenuMobile(links, link));
+    } else {
+      link.parentNode.addEventListener('mouseover', () => openSubMenu(links, link, overlay), true);
+      link.parentNode.addEventListener('mouseout', () => closeSubMenu(links, overlay), true);
+    }
   });
   overlay.addEventListener('click', () => closeSubMenu(links, overlay));
 }
