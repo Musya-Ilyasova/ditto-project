@@ -3,3 +3,4 @@
 /.temporary_cache
 .vercel
 .env
+.idea
