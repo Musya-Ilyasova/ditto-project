@@ -3,7 +3,7 @@ section.contacts
     .contacts__content
       h1.contacts__title Reach out to us
       p.contacts__text If you have any questions or suggestions - please talk to us and we will do our best to help you
-    form.form.contacts__form(action="" method="GET" enctype="text/plain")
+    form.form.contacts__form(action=process.env.FORM_CONTACT_LINK method="POST" enctype="text/plain")
       .form__item
         label.form__label(for="email") Email
         input.form__input#email(type="email" name="email" placeholder="example@mail.com")
