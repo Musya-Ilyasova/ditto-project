@@ -3,7 +3,7 @@ section.contacts
     .contacts__content
       h1.contacts__title Reach out to us
       p.contacts__text If you have any questions or suggestions - please talk to us and we will do our best to help you
-    form.form.contacts__form(action="")
+    form.form.contacts__form(action="" method="GET" enctype="text/plain")
       .form__item
         label.form__label(for="email") Email
         input.form__input#email(type="email" name="email" placeholder="example@mail.com")
@@ -16,7 +16,7 @@ section.contacts
         input.form__input#name(type="text" name="name" placeholder="name")
       .form__item
         .form__label(for="message") Describe your inquiry
-        textarea.form__input.form__input_textarea#message(name="", cols="30", rows="10" placeholder="Leave us a message...")
+        textarea.form__input.form__input_textarea#message(name="message", cols="30", rows="10" placeholder="Leave us a message...")
       .form__footer
         button(type="submit").btn.btn_primary.contacts__btn Submit
         a(href=process.env.SOC_TELEGRAM).contacts__link Ask on Telegram
