@@ -44,8 +44,9 @@
   &__btn.btn {
     margin-top: 24px;
     margin-bottom: 60px;
+    padding: 0 26px;
     @include mq('768') {
-      width: 139px;
+      width: fit-content;
       margin-top: 0;
       margin-left: auto;
       margin-bottom: 0;
