@@ -23,6 +23,9 @@ const integrationsSlider = () => {
       created(s) {
         s.moveToIdx(5, true, animation)
       },
+      updated(s) {
+        s.moveToIdx(s.track.details.abs + 5, true, animation)
+      },
       animationEnded(s) {
         s.moveToIdx(s.track.details.abs + 5, true, animation)
       },
