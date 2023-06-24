@@ -32,7 +32,7 @@ const showHideMsg = (msg) => {
   msg.style.display = "block";
   setTimeout(() => {
     msg.style.display = "";
-  }, 2000)
+  }, 3000)
 }
 
 export const addResponseMsg = () => {

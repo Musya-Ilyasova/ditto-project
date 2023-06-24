@@ -59,17 +59,23 @@
 
 .form__response {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 232px;
+  width: calc(100% - 32px);
+  max-width: 411px;
   display: none;
   text-align: center;
-  padding: 20px;
-  background: rgba(var(--black-rgb), 0.6);
-  color: white;
+  padding: 16px;
+  background: var(--white);
+  color: $text;
+  border: 2px solid $main;
+  border-radius: 8px;
+  @include mq('768') {
+    top: 30%;
+  }
   &_error {
-    background: rgba(var(--red-rgb), 0.8);
+    border: 2px solid $input-error;
   }
 }
